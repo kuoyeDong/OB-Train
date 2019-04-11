@@ -78,13 +78,6 @@ void PersonExperiment::setImage()
 			experiment_one(generalPath, frame, current_app_id);
 			m_pImgProvider->img = MattoQImage(frame);
 		}
-
-		//实验五
-		if (!frame.empty() && current_experiment == 5)
-		{
-			//experiment_five(videoPath, imagePath, frame, current_app_id);
-			m_pImgProvider->img = MattoQImage(frame);
-		}
 	}
 
 	emit callQmlRefeshImg();
@@ -108,6 +101,12 @@ void PersonExperiment::expStart()
 	if (current_experiment == 4)
 	{
 		experiment_four(imagePath, generalPath, frame, current_app_id);
+	}
+
+	//实验五
+	if (!frame.empty() && current_experiment == 5)
+	{
+		experiment_five(imagePath, generalPath, frame, current_app_id);
 	}
 }
 

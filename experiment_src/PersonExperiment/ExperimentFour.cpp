@@ -1,7 +1,6 @@
 #include "PersonExperiment.hpp"
 #include "../src/tracking/kcftracker.hpp"
 #include "../Tools/Tools.hpp"
-#include <fstream>
 
 using namespace std;
 using namespace cv;
@@ -13,7 +12,6 @@ Mat model;
 Mat alpha;
 Mat alpha_c1;
 Mat alpha_c2;
-Mat prob;
 Mat hann;
 
 float scale = 0.0f;
@@ -48,7 +46,6 @@ void PersonExperiment::configRelease()
 		modelread = false;
 		model.release();
 		alpha.release();
-		prob.release();
 
 		scale = 0.0f;
 		cell_size = 0;
@@ -75,7 +72,6 @@ bool readModels(string dirpath, bool hog, bool rgb)
 	string tmplFile;
 	string alphaFile_c1;
 	string alphaFile_c2;
-	string probFile;
 	string paramsFile;
 	string hannFile;
 	if (hog || rgb)
@@ -83,7 +79,6 @@ bool readModels(string dirpath, bool hog, bool rgb)
 		tmplFile = dirpath + '/' + "hog_rgb_latest_model.txt";
 		alphaFile_c1 = dirpath + '/' + "hog_rgb_latest_alpha_c1.txt";
 		alphaFile_c2 = dirpath + '/' + "hog_rgb_latest_alpha_c2.txt";
-		probFile = dirpath + '/' + "hog_rgb_prob.txt";
 		paramsFile = dirpath + '/' + "hog_rgb_tmpl_params.txt";
 		hannFile = dirpath + '/' + "hog_rgb_hann.txt";
 	}
@@ -92,13 +87,11 @@ bool readModels(string dirpath, bool hog, bool rgb)
 		tmplFile = dirpath + '/' + "gray_latest_model.txt";
 		alphaFile_c1 = dirpath + '/' + "gray_latest_alpha_c1.txt";
 		alphaFile_c2 = dirpath + '/' + "gray_latest_alpha_c2.txt";
-		probFile = dirpath + '/' + "gray_prob.txt";
 		paramsFile = dirpath + '/' + "gray_tmpl_params.txt";
 		hannFile = dirpath + '/' + "gray_hann.txt";
 	}
 
 	if (!txt2Mat(tmplFile, model))return false;
-	if (!txt2Mat(probFile, prob))return false;
 	if (!txt2Mat(alphaFile_c1, alpha_c1))return false;
 	if (!txt2Mat(alphaFile_c2, alpha_c2))return false;
 	if (!txt2Mat(hannFile, hann))return false;
@@ -118,7 +111,7 @@ bool readModels(string dirpath, bool hog, bool rgb)
 		twidth = int(tmp[0]);
 		theight = int(tmp[1]);
 		scale = tmp[2];
-		cell_size = int(tmp[3]);
+		cell_size = int(tmp[3]);	
 	}
 	else
 		return false;
@@ -140,7 +133,6 @@ void creatTracker(bool hog, bool rgb)
 		tracker_exp4._tmpl_sz.height = theight;
 		tracker_exp4._scale = scale;
 		tracker_exp4.hann = hann;
-		tracker_exp4._prob = prob;
 	}
 }
 
@@ -209,10 +201,10 @@ string TestModel(bool hog, bool rgb)
 				data_save_file = save_fullpath_exp4 + "/" + image_name + "_gray_res_map.txt";
 			}
 
-			writeMatToFile(show, data_save_file.c_str(), action, false);
+			writeMatToFile(res, data_save_file.c_str(), action, false);
 		}
 
-		string savepath = GetProgramDir() + "/" + "modify_pro_img.jpg";
+		string savepath = GetProgramDir() + "/" + "odify_pro_img.jpg";
 		imwrite(savepath, show);
 		string path = "file:///" + savepath;
 		return path;

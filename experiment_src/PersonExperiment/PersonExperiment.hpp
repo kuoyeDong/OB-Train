@@ -40,6 +40,7 @@ public:
 	Q_INVOKABLE void exp2Param(int para);
 	Q_INVOKABLE void exp3Param(int para, int hog, int rgb, QString leaning_rate);
 	Q_INVOKABLE void exp4Param(int para, int hog, int rgb);
+	Q_INVOKABLE void exp5Param(int param, int hog, int rgb);
 	Q_INVOKABLE void reInit(int choice);
 
 	 // with camera
@@ -83,7 +84,7 @@ public:
 	void experiment_two(std::string image_path, std::string save_path, cv::Mat &frame, int app_Id);
 	void experiment_three(std::string image_path, std::string save_path, cv::Mat &frame, int app_Id);
 	void experiment_four(std::string image_path, std::string save_path, cv::Mat &frame, int app_Id);
-	//void experiment_five(std::string video_path, std::string images_path, cv::Mat &frame, int app_Id);
+	void experiment_five(std::string image_path, std::string save_path, cv::Mat &frame, int app_Id);
 
 private:
 	//tools

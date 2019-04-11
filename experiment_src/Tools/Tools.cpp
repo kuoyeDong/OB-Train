@@ -183,3 +183,185 @@ bool txt2Mat(std::string filename, cv::Mat& image)
 		return false;
 	}
 }
+
+void GetAllFilesNotIncludeSubfolder(string path, vector<string>& files)
+{
+	// 文件句柄
+	intptr_t hFile = 0;
+	// 文件信息
+	struct _finddata_t fileinfo;
+
+	string p;
+
+	if ((hFile = _findfirst(p.assign(path).append("/*").c_str(), &fileinfo)) != -1) {
+		do {
+			// 第一种：保存文件的全路径
+			files.push_back(p.assign(path).append("/").append(fileinfo.name));
+			//第二种：不保存文件的全路径
+			files.push_back(fileinfo.name);
+		} while (_findnext(hFile, &fileinfo) == 0); //寻找下一个，成功返回0，否则-1
+
+		_findclose(hFile);
+	}
+}
+
+void GetAllFilesIncludeSubfolder(string path, vector<string>& files) {
+	//文件句柄
+	intptr_t hFile = 0;
+	//文件信息
+	struct _finddata_t fileinfo;
+	string p;
+	if ((hFile = _findfirst(p.assign(path).append("/*").c_str(), &fileinfo)) != -1) {
+		do {
+			if ((fileinfo.attrib & _A_SUBDIR)) { //比较文件类型是否是文件夹
+				if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0) {
+					// 第一种：保存文件的全路径
+					files.push_back(p.assign(path).append("/").append(fileinfo.name));
+					//第二种：不保存文件的全路径
+					files.push_back(fileinfo.name);
+					//递归搜索
+					GetAllFilesIncludeSubfolder(p.assign(path).append("/").append(fileinfo.name), files);
+				}
+			}
+			else {
+				// 第一种：保存文件的全路径
+				files.push_back(p.assign(path).append("/").append(fileinfo.name));
+				//第二种：不保存文件的全路径
+				files.push_back(fileinfo.name);
+			}
+		} while (_findnext(hFile, &fileinfo) == 0); //寻找下一个，成功返回0，否则-1
+		_findclose(hFile);
+	}
+}
+
+/*
+path: 指定目录
+files: 保存结果
+fileType: 指定的文件格式，如 .jpg
+*/
+void GetAllFilesIncludeSubfolder(string path, vector<string>& files, string fileType)
+{
+	// 文件句柄
+	intptr_t hFile = 0;
+	// 文件信息
+	struct _finddata_t fileinfo;
+
+	string p;
+
+	if ((hFile = _findfirst(p.assign(path).append("/*" + fileType).c_str(), &fileinfo)) != -1) {
+		do {
+			// 第一种：保存文件的全路径
+			files.push_back(p.assign(path).append("/").append(fileinfo.name));
+			//第二种：不保存文件的全路径
+			files.push_back(fileinfo.name);
+
+		} while (_findnext(hFile, &fileinfo) == 0); //寻找下一个，成功返回0，否则-1
+
+		_findclose(hFile);
+	}
+}
+
+void split(const string& str, const string& sp, vector<string>& vec)
+{
+	size_t size = sp.size();
+
+	vec.clear();
+	size_t end = 0, start = 0;
+	while (start != string::npos && start < str.size())
+	{
+		end = str.find(sp, start);
+		vec.push_back(str.substr(start, end - start)); // end == 0 时压入空字符串
+		start = end == string::npos ? end : end + size;
+	}
+
+	if (vec.empty())
+		vec.push_back(str);
+}
+
+
+void GetSpecialFilesFromDirectory(string path, string fileType, vector<string>& files)
+{
+	vector<string> tempFileTypes;
+	split(fileType, " ", tempFileTypes);
+	if (tempFileTypes.size() == 0)
+		return;
+
+	vector<int> file_num;
+
+	for (int i = 0; i < tempFileTypes.size(); ++i)
+	{
+		// 文件句柄
+		intptr_t hFile = 0;
+		// 文件信息
+		struct _finddata_t fileinfo;
+
+		string p;
+
+		if ((hFile = _findfirst(p.assign(path).append("/*" + tempFileTypes[i]).c_str(), &fileinfo)) != -1) {
+			do
+			{
+				// 第一种：保存文件的全路径
+				//files.push_back(p.assign(path).append("/").append(fileinfo.name));
+				//第二种：不保存文件的全路径
+				string filename = fileinfo.name;
+				file_num.push_back(stringToNum<int>(filename.substr(0, filename.rfind("."))));
+				//files.push_back(fileinfo.name);
+			} while (_findnext(hFile, &fileinfo) == 0); //寻找下一个，成功返回0，否则-1
+			_findclose(hFile);
+		}
+		sort(file_num.begin(), file_num.end());
+		for (i = 0; i < file_num.size(); i++)
+		{
+			string filename = to_string(file_num[i]) + tempFileTypes[0];
+			files.push_back(filename);
+		}
+	}
+}
+
+void GetAllFilesIncludeSubfolder(string path, string fileType, vector<string>& files)
+{
+	vector<string> tempFileTypes;
+	split(fileType, " ", tempFileTypes);
+	if (tempFileTypes.size() == 0)
+		return;
+	//文件句柄
+	intptr_t hFile = 0;
+	//文件信息
+	struct _finddata_t fileinfo;
+	string p;
+	if ((hFile = _findfirst(p.assign(path).append("/*").c_str(), &fileinfo)) != -1)
+	{
+		do
+		{
+			if ((fileinfo.attrib & _A_SUBDIR))
+			{ //比较文件类型是否是文件夹
+				if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0)
+				{
+					string subForld = p.assign(path).append("/").append(fileinfo.name);
+					//递归搜索
+					GetSpecialFilesFromDirectory(subForld, fileType, files);
+					GetAllFilesIncludeSubfolder(p.assign(path).append("/").append(fileinfo.name), fileType, files);
+				}
+			}
+			else
+			{
+				for (int i = 0; i < tempFileTypes.size(); ++i)
+				{
+					string fileName = fileinfo.name;
+					if (fileName.find(tempFileTypes[i]) != std::string::npos)
+					{
+						// 第一种：保存文件的全路径
+						files.push_back(p.assign(path).append("/").append(fileinfo.name));
+						//第二种：不保存文件的全路径
+						//files.push_back(fileinfo.name);
+					}
+					else
+					{
+						continue;
+					}
+				}
+			}
+		} while (_findnext(hFile, &fileinfo) == 0); //寻找下一个，成功返回0，否则-1
+		_findclose(hFile);
+	}
+}

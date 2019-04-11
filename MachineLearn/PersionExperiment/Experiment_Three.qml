@@ -107,13 +107,29 @@ Page {
         }
 
         onClicked: {
-            ExpImage.setEx_id(3, 1);
-            ExpImage.exp3Param(1, 1, 1, input_lrrate.text);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                trainStatus.text = qsTr("未
+设置
+参数");
+            }
+            else
+            {
+                ExpImage.setEx_id(3, 1);
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp3Param(1, 0, 0, input_lrrate.text);
+                }
+                else
+                {
+                    ExpImage.exp3Param(1, 1, 1, input_lrrate.text);
+                }
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -133,13 +149,29 @@ Page {
         }
 
         onClicked: {
-            ExpImage.setEx_id(3, 1);
-            ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                trainStatus.text = qsTr("未
+设置
+参数");
+            }
+            else
+            {
+                ExpImage.setEx_id(3, 1);
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp3Param(0, 0, 0, input_lrrate.text);
+                }
+                else
+                {
+                    ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
+                }
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -185,13 +217,29 @@ Page {
         }
 
         onClicked: {
-            ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
-            ExpImage.setEx_id(3, 3);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                trainStatus.text = qsTr("未
+设置
+参数");
+            }
+            else
+            {
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp3Param(0, 0, 0, input_lrrate.text);
+                }
+                else
+                {
+                    ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
+                }
+                ExpImage.setEx_id(3, 3);
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -303,13 +351,29 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp3Param(1, 1, 1, input_lrrate.text);
-                ExpImage.setEx_id(3, 3);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    trainStatus.text = qsTr("未
+    设置
+    参数");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp3Param(1, 0, 0, input_lrrate.text);
+                    }
+                    else
+                    {
+                        ExpImage.exp3Param(1, 1, 1, input_lrrate.text);
+                    }
+                    ExpImage.setEx_id(3, 3);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
 
         }
@@ -328,13 +392,29 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp3Param(2, 1, 1, input_lrrate.text);
-                ExpImage.setEx_id(3, 3);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    trainStatus.text = qsTr("未
+    设置
+    参数");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp3Param(2, 0, 0, input_lrrate.text);
+                    }
+                    else
+                    {
+                        ExpImage.exp3Param(2, 1, 1, input_lrrate.text);
+                    }
+                    ExpImage.setEx_id(3, 3);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
 
@@ -352,13 +432,29 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp3Param(3, 1, 1, input_lrrate.text);
-                ExpImage.setEx_id(3, 3);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    trainStatus.text = qsTr("未
+    设置
+    参数");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp3Param(3, 0, 0, input_lrrate.text);
+                    }
+                    else
+                    {
+                        ExpImage.exp3Param(3, 1, 1, input_lrrate.text);
+                    }
+                    ExpImage.setEx_id(3, 3);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
 
@@ -376,13 +472,29 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp3Param(4, 1, 1, input_lrrate.text);
-                ExpImage.setEx_id(3, 3);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    trainStatus.text = qsTr("未
+    设置
+    参数");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp3Param(4, 0, 0, input_lrrate.text);
+                    }
+                    else
+                    {
+                        ExpImage.exp3Param(4, 1, 1, input_lrrate.text);
+                    }
+                    ExpImage.setEx_id(3, 3);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
     }
@@ -561,8 +673,8 @@ Page {
     Label {
         id: lrrate
         y: 252
-        width: 186
-        height: 70
+        width: 165
+        height: 60
         text: qsTr("学习率：
 区间为[0,1]")
         anchors.left: hog.left
@@ -578,6 +690,7 @@ Page {
         width: 165
         height: 40
         text: qsTr("0.001")
+        anchors.verticalCenter: lrrate.verticalCenter
         anchors.left: lrrate.right
         anchors.leftMargin: 17
         font.pointSize: 20
@@ -602,17 +715,26 @@ Page {
         anchors.verticalCenter: getmodel.verticalCenter
 
         onClicked: {
-            ExpImage.reInit(1);
-            if(gray.checkState == Qt.Checked)
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
             {
-                ExpImage.exp3Param(0, 0, 0, input_lrrate.text);
+                trainStatus.text = qsTr("未
+设置
+参数");
             }
             else
             {
-                ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
+                ExpImage.reInit(1);
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp3Param(0, 0, 0, input_lrrate.text);
+                }
+                else
+                {
+                    ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
+                }
+                trainStatus.text = qsTr("参数
+    已重置")
             }
-            trainStatus.text = qsTr("参数
-已重置")
         }
     }
 
@@ -620,7 +742,7 @@ Page {
         id: param_rectangle
         x: 1168
         width: 478
-        height: 128
+        height: 110
         color: "#00000000"
         anchors.top: flip_rectangle.top
         anchors.topMargin: 0
@@ -644,6 +766,12 @@ Page {
 
 
 }
+
+
+
+
+
+
 
 
 

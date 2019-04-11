@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OBIntelligent", "OBIntelligent.vcxproj", "{3782DFEF-A53F-36C8-80AB-A9AC4D5DC22C}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{BB691A60-883A-40BB-95E6-B7FF3F294741}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -17,8 +15,6 @@ Global
 		{3782DFEF-A53F-36C8-80AB-A9AC4D5DC22C}.Debug|x64.Build.0 = Debug|x64
 		{3782DFEF-A53F-36C8-80AB-A9AC4D5DC22C}.Release|x64.ActiveCfg = Release|x64
 		{3782DFEF-A53F-36C8-80AB-A9AC4D5DC22C}.Release|x64.Build.0 = Release|x64
-		{BB691A60-883A-40BB-95E6-B7FF3F294741}.Debug|x64.ActiveCfg = Debug
-		{BB691A60-883A-40BB-95E6-B7FF3F294741}.Release|x64.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

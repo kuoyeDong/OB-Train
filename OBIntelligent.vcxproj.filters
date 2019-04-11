@@ -154,6 +154,9 @@
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentFour.cpp">
       <Filter>Source Files\experiment_src\PersonExperiment</Filter>
     </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentFive.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="datafresh.h">

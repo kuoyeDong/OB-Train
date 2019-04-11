@@ -96,40 +96,17 @@ string TrainModel(bool hog, bool rgb, float learning_rate)
 			src_tmpl = tracker_exp3._tmpl;
 
 			// save prob data, hann data, model size and scale
-			string src_prob_file;
 			string tmpl_params;
 			string src_hann_file;
 			if ((hog || rgb) && !save_fullpath_exp3.empty())
 			{
-				src_prob_file = save_fullpath_exp3 + "/" + "hog_rgb_prob.txt";
 				src_hann_file = save_fullpath_exp3 + "/" + "hog_rgb_hann.txt";
 				tmpl_params = save_fullpath_exp3 + "/" + "hog_rgb_tmpl_params.txt";
 			}
 			else
 			{
-				src_prob_file = save_fullpath_exp3 + "/" + "gray_prob.txt";
 				src_hann_file = save_fullpath_exp3 + "/" + "gray_hann.txt";
 				tmpl_params = save_fullpath_exp3 + "/" + "gray_tmpl_params.txt";
-			}
-
-			if (!tracker_exp3._prob.empty())
-			{
-				ofstream fout;
-				fout.open(src_prob_file);
-				fout << tracker_exp3._prob.cols << ' ' << tracker_exp3._prob.rows << endl;
-				for (int i = 0; i < tracker_exp3._prob.rows; i++)
-				{
-					for (int j = 0; j < tracker_exp3._prob.cols; j++)
-					{
-						if (isnan(tracker_exp3._prob.at<float>(i, j)))
-							fout << 0 << " ";
-						else
-							fout << tracker_exp3._prob.at<float>(i, j) << " ";
-					}
-					fout << std::endl;
-				}
-
-				fout.close();
 			}
 
 			if (!tracker_exp3.hann.empty())

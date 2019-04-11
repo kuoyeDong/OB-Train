@@ -186,6 +186,7 @@
     <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment1.cpp" />
     <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment2.cpp" />
     <ClCompile Include="experiment_src\FaceExperiment\fastmtcnn.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentFive.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentFour.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentOne.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentThree.cpp" />

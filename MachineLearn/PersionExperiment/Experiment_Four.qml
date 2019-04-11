@@ -107,13 +107,28 @@ Page {
         }
 
         onClicked: {
-            ExpImage.setEx_id(4, 2);
-            ExpImage.exp4Param(1, 1, 1);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                status.text = qsTr("请先设置参数
+再读取模型文件");
+            }
+            else
+            {
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp4Param(1, 0, 0);
+                }
+                else
+                {
+                    ExpImage.exp4Param(1, 1, 1);
+                }
+                ExpImage.setEx_id(4, 2);
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -133,13 +148,28 @@ Page {
         }
 
         onClicked: {
-            ExpImage.setEx_id(4, 2);
-            ExpImage.exp4Param(0, 1, 1);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                status.text = qsTr("请先设置参数
+再读取模型文件");
+            }
+            else
+            {
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp4Param(0, 0, 0);
+                }
+                else
+                {
+                    ExpImage.exp4Param(0, 1, 1);
+                }
+                ExpImage.setEx_id(4, 2);
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -185,13 +215,28 @@ Page {
         }
 
         onClicked: {
-            ExpImage.exp4Param(0, 1, 1);
-            ExpImage.setEx_id(4, 4);
-            ExpImage.expStart();
-            while(!ExpImage.appRunStatus()){}
-            img.source = "";
-            img.source = ExpImage.get_tmp_path(0);
-            ExpImage.setAppRunStatusClose();
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                status.text = qsTr("请先设置参数
+再读取模型文件");
+            }
+            else
+            {
+                if(gray.checkState == Qt.Checked)
+                {
+                    ExpImage.exp4Param(0, 0, 0);
+                }
+                else
+                {
+                    ExpImage.exp4Param(0, 1, 1);
+                }
+                ExpImage.setEx_id(4, 4);
+                ExpImage.expStart();
+                while(!ExpImage.appRunStatus()){}
+                img.source = "";
+                img.source = ExpImage.get_tmp_path(0);
+                ExpImage.setAppRunStatusClose();
+            }
         }
     }
 
@@ -303,13 +348,28 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp4Param(1, 1, 1);
-                ExpImage.setEx_id(4, 4);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    status.text = qsTr("请先设置参数
+    再读取模型文件");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp4Param(1, 0, 0);
+                    }
+                    else
+                    {
+                        ExpImage.exp4Param(1, 1, 1);
+                    }
+                    ExpImage.setEx_id(4, 4);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
 
         }
@@ -328,13 +388,28 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp4Param(2, 1, 1);
-                ExpImage.setEx_id(4, 4);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    status.text = qsTr("请先设置参数
+    再读取模型文件");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp4Param(2, 0, 0);
+                    }
+                    else
+                    {
+                        ExpImage.exp4Param(2, 1, 1);
+                    }
+                    ExpImage.setEx_id(4, 4);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
 
@@ -352,13 +427,28 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp4Param(3, 1, 1);
-                ExpImage.setEx_id(4, 4);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    status.text = qsTr("请先设置参数
+    再读取模型文件");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp4Param(3, 0, 0);
+                    }
+                    else
+                    {
+                        ExpImage.exp4Param(3, 1, 1);
+                    }
+                    ExpImage.setEx_id(4, 4);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
 
@@ -376,13 +466,28 @@ Page {
             }
 
             onClicked: {
-                ExpImage.exp4Param(4, 1, 1);
-                ExpImage.setEx_id(4, 4);
-                ExpImage.expStart();
-                while(!ExpImage.appRunStatus()){}
-                img.source = "";
-                img.source = ExpImage.get_tmp_path(0);
-                ExpImage.setAppRunStatusClose();
+                if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+                {
+                    status.text = qsTr("请先设置参数
+    再读取模型文件");
+                }
+                else
+                {
+                    if(gray.checkState == Qt.Checked)
+                    {
+                        ExpImage.exp4Param(4, 0, 0);
+                    }
+                    else
+                    {
+                        ExpImage.exp4Param(4, 1, 1);
+                    }
+                    ExpImage.setEx_id(4, 4);
+                    ExpImage.expStart();
+                    while(!ExpImage.appRunStatus()){}
+                    img.source = "";
+                    img.source = ExpImage.get_tmp_path(0);
+                    ExpImage.setAppRunStatusClose();
+                }
             }
         }
     }
@@ -503,7 +608,7 @@ Page {
         anchors.top: param_rectangle.top
         anchors.topMargin: 0
         anchors.left: param_rectangle.left
-        anchors.leftMargin: 0
+        anchors.leftMargin: 10
         font.bold: true
         font.pointSize: 20
         onCheckStateChanged: {
@@ -699,6 +804,18 @@ Page {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
