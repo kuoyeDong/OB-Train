@@ -26,7 +26,7 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-//test
+
     QApplication  app(argc, argv);
 
 	ShowImage CodeImage_Face;
