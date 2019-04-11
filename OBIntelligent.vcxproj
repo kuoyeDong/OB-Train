@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3782DFEF-A53F-36C8-80AB-A9AC4D5DC22C}</ProjectGuid>
+    <RootNamespace>OBIntelligent</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>OBIntelligent</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v141</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>OBIntelligent</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OBIntelligent</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OBIntelligent</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5WebEngine.lib;$(QTDIR)\lib\Qt5WebEngineCore.lib;$(QTDIR)\lib\Qt5Quick.lib;$(QTDIR)\lib\Qt5MultimediaWidgets.lib;$(QTDIR)\lib\Qt5Multimedia.lib;$(QTDIR)\lib\Qt5Charts.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5WebView.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5WebChannel.lib;$(QTDIR)\lib\Qt5Qml.lib;$(QTDIR)\lib\Qt5WebSockets.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5SerialPort.lib;$(QTDIR)\lib\Qt5Sensors.lib;$(QTDIR)\lib\Qt5Positioning.lib;$(QTDIR)\lib\Qt5Core.lib;$(QTDIR)\lib\qtmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\OBIntelligent.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>$(Configuration)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <OutputFile>$(Configuration)\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+    </QtRcc>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5WebEngined.lib;$(QTDIR)\lib\Qt5WebEngineCored.lib;$(QTDIR)\lib\Qt5Quickd.lib;$(QTDIR)\lib\Qt5MultimediaWidgetsd.lib;$(QTDIR)\lib\Qt5Multimediad.lib;$(QTDIR)\lib\Qt5Chartsd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5WebViewd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5WebChanneld.lib;$(QTDIR)\lib\Qt5Qmld.lib;$(QTDIR)\lib\Qt5WebSocketsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5SerialPortd.lib;$(QTDIR)\lib\Qt5Sensorsd.lib;$(QTDIR)\lib\Qt5Positioningd.lib;$(QTDIR)\lib\Qt5Cored.lib;$(QTDIR)\lib\qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\OBIntelligent.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtRcc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>$(Configuration)\qrc_%(Filename).cpp</OutputFile>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+    </QtRcc>
+    <QtMoc>
+      <QTDIR>$(QTDIR)</QTDIR>
+      <OutputFile>$(Configuration)\moc_%(Filename).cpp</OutputFile>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</IncludePath>
+      <Define>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="datafresh.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment1.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment2.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\fastmtcnn.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentFour.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentOne.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentThree.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentTwo.cpp" />
+    <ClCompile Include="experiment_src\PersonExperiment\PersonExperiment.cpp" />
+    <ClCompile Include="experiment_src\Tools\Tools.cpp" />
+    <ClCompile Include="jsapiobject.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="openfile.cpp" />
+    <ClCompile Include="portmodel.cpp" />
+    <ClCompile Include="serialtest.cpp" />
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\Detection\detection.cpp" />
+    <ClCompile Include="src\Detection\Posture.cpp" />
+    <ClCompile Include="src\imageprovider.cpp" />
+    <ClCompile Include="src\imageshow.cpp" />
+    <ClCompile Include="src\SaveFaceName.cpp" />
+    <ClCompile Include="src\tracking\kcftracker.cpp" />
+    <ClCompile Include="src\ZhSupport.cpp" />
+    <ClCompile Include="systemopen.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="datafresh.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+    <QtMoc Include="jsapiobject.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+    <QtMoc Include="portmodel.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+    <QtMoc Include="serialtest.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+    <QtMoc Include="systemopen.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+    <QtMoc Include="websockettransport.h">
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Release|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Release|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB</Define>
+      <CompilerFlavor Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">msvc;msvc</CompilerFlavor>
+      <Include Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">./$(Configuration)/moc_predefs.h;./$(Configuration)/moc_predefs.h</Include>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Component\FaceChangePage.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_Five.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_Four.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_One.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_Six.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_Three.qml" />
+    <None Include="MachineLearn\PersionExperiment\Experiment_Two.qml" />
+    <None Include="MachineLearn\PersionExperiment\Person_Experiment_List.qml" />
+    <None Include="MachineLearn\VisionExperiment.qml" />
+    <None Include="module\blockly\media\1x1.gif" />
+    <None Include="Sensor\DroneSensor\BarometersGuide.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage1.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage2.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage3.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage4.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage5.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage6.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage7.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage8.qml" />
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage9.qml" />
+    <None Include="VisionVoice\images\AI_ML.jpg" />
+    <None Include="Drone\DronePage\APP.png" />
+    <None Include="Drone\images\APP.png" />
+    <None Include="Iot\images\APP.png" />
+    <None Include="Robot\images\APP.png" />
+    <None Include="VisionVoice\images\APP.png" />
+    <None Include="Drone\APP.qml" />
+    <None Include="Iot\APP.qml" />
+    <None Include="Robot\APP.qml" />
+    <None Include="VisionVoice\APP.qml" />
+    <None Include="VisionVoice\images\AlphaGo.jpg" />
+    <None Include="Robot\images\Arm.png" />
+    <None Include="Robot\Arm.qml" />
+    <None Include="Sensor\DroneSensor\images\Barometers.png" />
+    <None Include="Sensor\DroneSensor\Barometers.qml" />
+    <None Include="Iot\BasicNet.qml" />
+    <None Include="Sensor\VisionVoiceSensor\images\Binocular.png" />
+    <None Include="Sensor\VisionVoiceSensor\Binocular.qml" />
+    <None Include="VisionVoice\images\CNN.jpg" />
+    <None Include="Sensor\DroneSensor\images\Calibration.jpg" />
+    <None Include="Sensor\RobotSensor\images\Camera.png" />
+    <None Include="Sensor\RobotSensor\Camera.qml" />
+    <None Include="Sensor\IotSensor\images\Card.png" />
+    <None Include="Sensor\IotSensor\Card.qml" />
+    <None Include="Component\CharViewPage.qml" />
+    <None Include="Component\CompassUi.qml" />
+    <None Include="Iot\images\Connection.png" />
+    <None Include="Robot\images\Connection.png" />
+    <None Include="Iot\Connection.qml" />
+    <None Include="Robot\Connection.qml" />
+    <None Include="Drone\images\Cruiser.png" />
+    <None Include="Drone\Cruiser.qml" />
+    <None Include="Sensor\DroneSensor\UartData\DataBasicRecAndSendPage.qml" />
+    <None Include="Sensor\DroneSensor\UartData\DataSaveCompletedPage.qml" />
+    <None Include="MachineLearn\images\DataTrain.png" />
+    <None Include="MachineLearn\DataTrain.qml" />
+    <None Include="Drone\images\Doubler.png" />
+    <None Include="Drone\Doubler.qml" />
+    <None Include="Drone\images\Drone.png" />
+    <None Include="Sensor\images\Drone.png" />
+    <None Include="Drone\Drone.qml" />
+    <None Include="Drone\DronePage\DroneCharViewPage.qml" />
+    <None Include="Drone\DroneControl.qml" />
+    <None Include="Drone\DronePage\DroneControlPage.qml" />
+    <None Include="Drone\DronePage\DroneDataApplicatePage.qml" />
+    <None Include="Drone\DroneGuide.qml" />
+    <None Include="Drone\images\DroneGuidePage.jpg" />
+    <None Include="Drone\DronePage\DroneInfoPage.qml" />
+    <None Include="Drone\DronePage.qml" />
+    <None Include="Drone\DronePage\DroneProjectDevelopPage.qml" />
+    <None Include="Sensor\DroneSensor\DroneSensor.qml" />
+    <None Include="Sensor\DroneSensor\images\EarthMagCa.png" />
+    <None Include="VisionVoice\Face.qml" />
+    <None Include="VisionVoice\PresentPage\FaceDetect.qml" />
+    <None Include="VisionVoice\images\FaceGuidePage.jpg" />
+    <None Include="VisionVoice\FaceGuidePage.qml" />
+    <None Include="VisionVoice\PresentPage\FacePresent.qml" />
+    <None Include="Component\FaceRegisterPage.qml" />
+    <None Include="VisionVoice\images\FaceUnlock.png" />
+    <None Include="VisionVoice\PresentPage\FaceUseGuide.qml" />
+    <None Include="Sensor\DroneSensor\images\GPS.png" />
+    <None Include="Sensor\DroneSensor\GPS.qml" />
+    <None Include="Sensor\DroneSensor\GPSPage\GPSDataApplicatePage.qml" />
+    <None Include="Sensor\DroneSensor\GPSGuide.qml" />
+    <None Include="Sensor\DroneSensor\images\GPSGuidePage.jpg" />
+    <None Include="Sensor\DroneSensor\GPSPage\GPSInfoPage.qml" />
+    <None Include="Sensor\DroneSensor\GPSPage\GPSProjectDevelopPage.qml" />
+    <None Include="VisionVoice\images\GestureGuidePage.jpg" />
+    <None Include="VisionVoice\GestureGuidePage.qml" />
+    <None Include="Iot\images\GoableNet.png" />
+    <None Include="Iot\GoableNet.qml" />
+    <None Include="Sensor\DroneSensor\images\Gyro.png" />
+    <None Include="Sensor\RobotSensor\images\Gyro.png" />
+    <None Include="Sensor\DroneSensor\Gyro.qml" />
+    <None Include="Sensor\RobotSensor\Gyro.qml" />
+    <None Include="Sensor\DroneSensor\GyroGuide.qml" />
+    <None Include="Sensor\VisionVoiceSensor\images\HandPrint.png" />
+    <None Include="Sensor\VisionVoiceSensor\HandPrint.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMU2D.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMU2DHEADING.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMUCharViewPage.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMUControlPage.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMUDataApplicatePage.qml" />
+    <None Include="Sensor\DroneSensor\images\IMUGuidePage.jpg" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMUInfoPage.qml" />
+    <None Include="Sensor\DroneSensor\IMUPage\IMUProjectDevelopPage.qml" />
+    <None Include="Sensor\DroneSensor\images\Infrared.png" />
+    <None Include="Sensor\IotSensor\images\Infrared.png" />
+    <None Include="Sensor\RobotSensor\images\Infrared.png" />
+    <None Include="Sensor\DroneSensor\Infrared.qml" />
+    <None Include="Sensor\IotSensor\Infrared.qml" />
+    <None Include="Sensor\RobotSensor\Infrared.qml" />
+    <None Include="Drone\images\Interface.png" />
+    <None Include="Iot\images\Interface.png" />
+    <None Include="Robot\images\Interface.png" />
+    <None Include="VisionVoice\images\Interface.png" />
+    <None Include="Drone\Interface.qml" />
+    <None Include="Iot\Interface.qml" />
+    <None Include="Robot\Interface.qml" />
+    <None Include="VisionVoice\Interface.qml" />
+    <None Include="Sensor\images\Iot.png" />
+    <None Include="Iot\IotPage.qml" />
+    <None Include="Sensor\IotSensor\IotSensor.qml" />
+    <None Include="module\blockly\LICENSE" />
+    <None Include="Iot\images\LocalNet.png" />
+    <None Include="VisionVoice\images\ML.jpg" />
+    <None Include="VisionVoice\images\ML_Human.jpg" />
+    <None Include="MachineLearn\MachineLearnPage.qml" />
+    <None Include="Sensor\DroneSensor\Mag.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagCalibrationPage.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagCharViewPage.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagControlPage.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagDataApplicatePage.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagDataPage.qml" />
+    <None Include="Sensor\DroneSensor\PresentPage\MagFlow.qml" />
+    <None Include="Sensor\DroneSensor\MagGuide.qml" />
+    <None Include="Sensor\DroneSensor\images\MagGuidePage.jpg" />
+    <None Include="Sensor\DroneSensor\MagPage\MagInfoPage.qml" />
+    <None Include="Sensor\DroneSensor\PresentPage\MagPresent.qml" />
+    <None Include="Sensor\DroneSensor\MagPage\MagProjectDevelopPage.qml" />
+    <None Include="Drone\images\Model.png" />
+    <None Include="Iot\images\Model.png" />
+    <None Include="Robot\images\Model.png" />
+    <None Include="VisionVoice\images\Model.png" />
+    <None Include="Drone\Model.qml" />
+    <None Include="Iot\Model.qml" />
+    <None Include="Robot\Model.qml" />
+    <None Include="VisionVoice\Model.qml" />
+    <None Include="MachineLearn\images\ModelGenerate.png" />
+    <None Include="Sensor\IotSensor\images\OBOX.png" />
+    <None Include="VisionVoice\PresentPage\OBVideo.qml" />
+    <None Include="Sensor\IotSensor\Obox.qml" />
+    <None Include="Sensor\DroneSensor\images\OpticalFlow.png" />
+    <None Include="Sensor\DroneSensor\OpticalFlow.qml" />
+    <None Include="Sensor\IotSensor\images\Pannel.png" />
+    <None Include="Sensor\IotSensor\Pannel.qml" />
+    <None Include="VisionVoice\Person.qml" />
+    <None Include="VisionVoice\images\PersonControl.png" />
+    <None Include="VisionVoice\images\PersonGuidePage.jpg" />
+    <None Include="VisionVoice\PersonGuidePage.qml" />
+    <None Include="VisionVoice\PresentPage\PersonPresent.qml" />
+    <None Include="VisionVoice\images\Posture.png" />
+    <None Include="VisionVoice\Detection\Posture_Teaching.qml" />
+    <None Include="Sensor\RobotSensor\images\QRC.png" />
+    <None Include="Sensor\RobotSensor\QRC.qml" />
+    <None Include="Component\QmlToggleButton.qml" />
+    <None Include="module\blockly\README.md" />
+    <None Include="module\blockly\appengine\README.txt" />
+    <None Include="module\blockly\accessible\README" />
+    <None Include="Component\RFSetPage.qml" />
+    <None Include="Sensor\RobotSensor\images\Radar.png" />
+    <None Include="Sensor\RobotSensor\Radar.qml" />
+    <None Include="Robot\images\Robot.png" />
+    <None Include="Sensor\images\Robot.png" />
+    <None Include="Robot\Robot.qml" />
+    <None Include="Robot\RobotPage.qml" />
+    <None Include="Sensor\RobotSensor\RobotSensor.qml" />
+    <None Include="module\blockly\accessible\libs\Rx.umd.min.js" />
+    <None Include="Sensor\SensorPage.qml" />
+    <None Include="SerialPortRefresh.js" />
+    <None Include="Sensor\IotSensor\images\Socket.png" />
+    <None Include="Sensor\IotSensor\Socket.qml" />
+    <None Include="Sensor\VisionVoiceSensor\images\StreamTrans.png" />
+    <None Include="Sensor\VisionVoiceSensor\StreamTrans.qml" />
+    <None Include="Component\SwipeViewPage.qml" />
+    <None Include="VisionVoice\Detection\Tracking_Teaching.qml" />
+    <None Include="MachineLearn\images\TrainVerify.png" />
+    <None Include="MachineLearn\TrainVerify.qml" />
+    <None Include="Sensor\DroneSensor\images\Ultrasonic.png" />
+    <None Include="Sensor\RobotSensor\images\Ultrasonic.png" />
+    <None Include="Sensor\DroneSensor\Ultrasonic.qml" />
+    <None Include="Sensor\RobotSensor\Ultrasonic.qml" />
+    <None Include="VisionVoice\PresentPage\UseGuide.qml" />
+    <None Include="VisionVoice\VVPage.qml" />
+    <None Include="Component\VideoPlayer.qml" />
+    <None Include="Component\VideoPlayerDBW.qml" />
+    <None Include="Component\VideoPlayerTest.qml" />
+    <None Include="Sensor\images\VisionVoice.png" />
+    <None Include="Sensor\VisionVoiceSensor\VisionVoiceSensor.qml" />
+    <None Include="VisionVoice\Detection\Vision_Examples_Posture.qml" />
+    <None Include="VisionVoice\Detection\Vision_Examples_Tracking.qml" />
+    <None Include="VisionVoice\Voice.qml" />
+    <None Include="Sensor\VisionVoiceSensor\images\VoiceVerify.png" />
+    <None Include="VisionVoice\images\VoiceVerify.png" />
+    <None Include="Sensor\VisionVoiceSensor\VoiceVerify.qml" />
+    <None Include="module\blockly\media\accessible.css" />
+    <None Include="module\blockly\accessible\libs\angular2-all.umd.min.js" />
+    <None Include="module\blockly\accessible\libs\angular2-polyfills.min.js" />
+    <None Include="module\blockly\accessible\app.component.js" />
+    <None Include="module\blockly\appengine\app.yaml" />
+    <None Include="module\blockly\appengine\apple-touch-icon.png" />
+    <None Include="module\blockly\dobots\msg\ar.js" />
+    <None Include="module\blockly\msg\js\ar.js" />
+    <None Include="module\blockly\msg\json\ar.json" />
+    <None Include="Component\arrow.png" />
+    <None Include="module\blockly\msg\js\az.js" />
+    <None Include="module\blockly\msg\json\az.json" />
+    <None Include="module\blockly\msg\js\ba.js" />
+    <None Include="module\blockly\msg\json\ba.json" />
+    <None Include="images\background.png" />
+    <None Include="images\background3.png" />
+    <None Include="module\blockly\msg\js\bcc.js" />
+    <None Include="module\blockly\msg\json\bcc.json" />
+    <None Include="module\blockly\dobots\msg\be-tarask.js" />
+    <None Include="module\blockly\msg\js\be-tarask.js" />
+    <None Include="module\blockly\msg\json\be-tarask.json" />
+    <None Include="module\blockly\msg\js\bg.js" />
+    <None Include="module\blockly\msg\json\bg.json" />
+    <None Include="module\blockly\core\block.js" />
+    <None Include="module\blockly\core\block_render_svg.js" />
+    <None Include="module\blockly\core\block_svg.js" />
+    <None Include="module\blockly\core\blockly.js" />
+    <None Include="module\blockly\blockly_compressed.js" />
+    <None Include="module\blockly\blockly_uncompressed.js" />
+    <None Include="module\blockly\core\blocks.js" />
+    <None Include="module\blockly\blocks_compressed.js" />
+    <None Include="module\blockly\msg\js\bn.js" />
+    <None Include="module\blockly\msg\json\bn.json" />
+    <None Include="module\blockly\dobots\msg\br.js" />
+    <None Include="module\blockly\msg\js\br.js" />
+    <None Include="module\blockly\msg\json\br.json" />
+    <None Include="VisionVoice\images\brain.jpeg" />
+    <None Include="module\blockly\core\bubble.js" />
+    <None Include="module\blockly\build.py" />
+    <None Include="module\blockly\dobots\msg\ca.js" />
+    <None Include="module\blockly\msg\js\ca.js" />
+    <None Include="module\blockly\msg\json\ca.json" />
+    <None Include="images\cameraConnect.png" />
+    <None Include="module\blockly\media\click.mp3" />
+    <None Include="module\blockly\media\click.ogg" />
+    <None Include="module\blockly\media\click.wav" />
+    <None Include="module\blockly\accessible\clipboard.service.js" />
+    <None Include="module\blockly\dobots\code.js" />
+    <None Include="module\blockly\blocks\colour.js" />
+    <None Include="module\blockly\generators\dart\colour.js" />
+    <None Include="module\blockly\generators\javascript\colour.js" />
+    <None Include="module\blockly\generators\lua\colour.js" />
+    <None Include="module\blockly\generators\php\colour.js" />
+    <None Include="module\blockly\generators\python\colour.js" />
+    <None Include="module\blockly\core\comment.js" />
+    <None Include="module\blockly\i18n\common.py" />
+    <None Include="Component\compass.svg" />
+    <None Include="module\blockly\core\connection.js" />
+    <None Include="module\blockly\core\connection_db.js" />
+    <None Include="module\blockly\core\constants.js" />
+    <None Include="module\blockly\core\contextmenu.js" />
+    <None Include="Sensor\DroneSensor\images\corner.png" />
+    <None Include="module\blockly\i18n\create_messages.py" />
+    <None Include="module\blockly\dobots\msg\cs.js" />
+    <None Include="module\blockly\msg\js\cs.js" />
+    <None Include="module\blockly\msg\json\cs.json" />
+    <None Include="module\blockly\core\css.js" />
+    <None Include="module\blockly\dobots\msg\da.js" />
+    <None Include="module\blockly\msg\js\da.js" />
+    <None Include="module\blockly\msg\json\da.json" />
+    <None Include="module\blockly\generators\dart.js" />
+    <None Include="module\blockly\dart_compressed.js" />
+    <None Include="module\blockly\dobots\msg\de.js" />
+    <None Include="module\blockly\msg\js\de.js" />
+    <None Include="module\blockly\msg\json\de.json" />
+    <None Include="module\blockly\i18n\dedup_json.py" />
+    <None Include="module\blockly\media\delete.mp3" />
+    <None Include="module\blockly\media\delete.ogg" />
+    <None Include="module\blockly\media\delete.wav" />
+    <None Include="module\blockly\media\disconnect.mp3" />
+    <None Include="module\blockly\media\disconnect.ogg" />
+    <None Include="module\blockly\media\disconnect.wav" />
+    <None Include="module\blockly\dobots\dobot.js" />
+    <None Include="images\dog.jpg" />
+    <QtRcc Include="drone.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">drone</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">drone</InitFuncName>
+    </QtRcc>
+    <None Include="Sensor\DroneSensor\images\earthMag.png" />
+    <None Include="module\blockly\dobots\msg\el.js" />
+    <None Include="module\blockly\msg\js\el.js" />
+    <None Include="module\blockly\msg\json\el.json" />
+    <None Include="module\blockly\dobots\msg\en.js" />
+    <None Include="module\blockly\msg\js\en.js" />
+    <None Include="module\blockly\msg\json\en.json" />
+    <None Include="module\blockly\dobots\msg\es.js" />
+    <None Include="module\blockly\msg\js\es.js" />
+    <None Include="module\blockly\msg\json\es.json" />
+    <None Include="module\blockly\accessible\libs\es6-shim.min.js" />
+    <None Include="module\blockly\core\events.js" />
+    <None Include="module\blockly\dobots\msg\fa.js" />
+    <None Include="module\blockly\msg\js\fa.js" />
+    <None Include="module\blockly\msg\json\fa.json" />
+    <None Include="VisionVoice\images\face.jpg" />
+    <None Include="VisionVoice\images\face1.jpg" />
+    <None Include="VisionVoice\images\face2.jpg" />
+    <None Include="module\blockly\appengine\favicon.ico" />
+    <None Include="VisionVoice\images\feature_hand.jpg" />
+    <None Include="module\blockly\msg\js\fi.js" />
+    <None Include="module\blockly\msg\json\fi.json" />
+    <None Include="module\blockly\accessible\field.component.js" />
+    <None Include="module\blockly\core\field.js" />
+    <None Include="module\blockly\core\field_angle.js" />
+    <None Include="module\blockly\core\field_checkbox.js" />
+    <None Include="module\blockly\core\field_colour.js" />
+    <None Include="module\blockly\core\field_date.js" />
+    <None Include="module\blockly\core\field_dropdown.js" />
+    <None Include="module\blockly\core\field_image.js" />
+    <None Include="module\blockly\core\field_label.js" />
+    <None Include="module\blockly\core\field_number.js" />
+    <None Include="module\blockly\core\field_textinput.js" />
+    <None Include="module\blockly\core\field_variable.js" />
+    <None Include="Sensor\DroneSensor\images\flow.PNG" />
+    <None Include="module\blockly\core\flyout.js" />
+    <None Include="module\blockly\dobots\msg\fr.js" />
+    <None Include="module\blockly\msg\js\fr.js" />
+    <None Include="module\blockly\msg\json\fr.json" />
+    <None Include="VisionVoice\images\framework.png" />
+    <None Include="module\blockly\core\generator.js" />
+    <None Include="module\blockly\media\handclosed.cur" />
+    <None Include="module\blockly\media\handdelete.cur" />
+    <None Include="module\blockly\media\handopen.cur" />
+    <None Include="module\blockly\dobots\msg\he.js" />
+    <None Include="module\blockly\msg\js\he.js" />
+    <None Include="module\blockly\msg\json\he.json" />
+    <None Include="module\blockly\msg\js\hi.js" />
+    <None Include="module\blockly\msg\json\hi.json" />
+    <None Include="module\blockly\dobots\msg\hrx.js" />
+    <None Include="module\blockly\msg\js\hrx.js" />
+    <None Include="module\blockly\msg\json\hrx.json" />
+    <None Include="module\blockly\dobots\msg\hu.js" />
+    <None Include="module\blockly\msg\js\hu.js" />
+    <None Include="module\blockly\msg\json\hu.json" />
+    <None Include="module\blockly\dobots\msg\ia.js" />
+    <None Include="module\blockly\msg\js\ia.js" />
+    <None Include="module\blockly\msg\json\ia.json" />
+    <None Include="module\blockly\core\icon.js" />
+    <None Include="module\blockly\dobots\icon.png" />
+    <None Include="module\blockly\dobots\icons.png" />
+    <None Include="module\blockly\msg\js\id.js" />
+    <None Include="module\blockly\msg\json\id.json" />
+    <None Include="module\blockly\dobots\index.html" />
+    <None Include="module\blockly\appengine\index.yaml" />
+    <None Include="module\blockly\appengine\index_redirect.py" />
+    <None Include="module\blockly\core\inject.js" />
+    <None Include="module\blockly\core\input.js" />
+    <None Include="VisionVoice\images\intro1.gif" />
+    <None Include="VisionVoice\images\intro2.gif" />
+    <None Include="VisionVoice\images\intro3.jpg" />
+    <None Include="VisionVoice\images\intro4.jpg" />
+    <None Include="VisionVoice\images\intro5.jpg" />
+    <None Include="VisionVoice\images\intro6.jpg" />
+    <None Include="VisionVoice\images\intro7.gif" />
+    <None Include="VisionVoice\images\intro8.gif" />
+    <None Include="module\blockly\dobots\msg\is.js" />
+    <None Include="module\blockly\msg\js\is.js" />
+    <None Include="module\blockly\msg\json\is.json" />
+    <None Include="module\blockly\dobots\msg\it.js" />
+    <None Include="module\blockly\msg\js\it.js" />
+    <None Include="module\blockly\msg\json\it.json" />
+    <None Include="module\blockly\dobots\msg\ja.js" />
+    <None Include="module\blockly\msg\js\ja.js" />
+    <None Include="module\blockly\msg\json\ja.json" />
+    <None Include="module\blockly\generators\javascript.js" />
+    <None Include="module\blockly\javascript_compressed.js" />
+    <None Include="module\blockly\i18n\js_to_json.py" />
+    <None Include="module\blockly\i18n\json_to_js.py" />
+    <None Include="module\blockly\dobots\msg\ko.js" />
+    <None Include="module\blockly\msg\js\ko.js" />
+    <None Include="module\blockly\msg\json\ko.json" />
+    <None Include="module\blockly\msg\js\lb.js" />
+    <None Include="module\blockly\msg\json\lb.json" />
+    <None Include="module\blockly\blocks\lists.js" />
+    <None Include="module\blockly\generators\dart\lists.js" />
+    <None Include="module\blockly\generators\javascript\lists.js" />
+    <None Include="module\blockly\generators\lua\lists.js" />
+    <None Include="module\blockly\generators\php\lists.js" />
+    <None Include="module\blockly\generators\python\lists.js" />
+    <None Include="module\blockly\msg\js\lki.js" />
+    <None Include="module\blockly\msg\json\lki.json" />
+    <None Include="module\blockly\blocks\logic.js" />
+    <None Include="module\blockly\generators\dart\logic.js" />
+    <None Include="module\blockly\generators\javascript\logic.js" />
+    <None Include="module\blockly\generators\lua\logic.js" />
+    <None Include="module\blockly\generators\php\logic.js" />
+    <None Include="module\blockly\generators\python\logic.js" />
+    <None Include="module\blockly\blocks\loops.js" />
+    <None Include="module\blockly\generators\dart\loops.js" />
+    <None Include="module\blockly\generators\javascript\loops.js" />
+    <None Include="module\blockly\generators\lua\loops.js" />
+    <None Include="module\blockly\generators\php\loops.js" />
+    <None Include="module\blockly\generators\python\loops.js" />
+    <None Include="module\blockly\msg\js\lrc.js" />
+    <None Include="module\blockly\msg\json\lrc.json" />
+    <None Include="module\blockly\msg\js\lt.js" />
+    <None Include="module\blockly\msg\json\lt.json" />
+    <None Include="module\blockly\generators\lua.js" />
+    <None Include="module\blockly\lua_compressed.js" />
+    <QtRcc Include="machinelearning.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">machinelearning</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">machinelearning</InitFuncName>
+    </QtRcc>
+    <None Include="Sensor\DroneSensor\images\mag.png" />
+    <None Include="Sensor\DroneSensor\images\mag1.png.jpg" />
+    <None Include="Sensor\DroneSensor\images\magVerify.png" />
+    <None Include="main.qml" />
+    <None Include="module\blockly\blocks\math.js" />
+    <None Include="module\blockly\generators\dart\math.js" />
+    <None Include="module\blockly\generators\javascript\math.js" />
+    <None Include="module\blockly\generators\lua\math.js" />
+    <None Include="module\blockly\generators\php\math.js" />
+    <None Include="module\blockly\generators\python\math.js" />
+    <None Include="module\blockly\accessible\messages.js" />
+    <None Include="module\blockly\msg\messages.js" />
+    <None Include="module\blockly\dobots\msg\mk.js" />
+    <None Include="module\blockly\msg\js\mk.js" />
+    <None Include="module\blockly\msg\json\mk.json" />
+    <QtRcc Include="module.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">module</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">module</InitFuncName>
+    </QtRcc>
+    <None Include="module\blockly\dobots\msg\ms.js" />
+    <None Include="module\blockly\msg\js\ms.js" />
+    <None Include="module\blockly\msg\json\ms.json" />
+    <None Include="module\blockly\core\msg.js" />
+    <None Include="module\blockly\core\mutator.js" />
+    <None Include="module\blockly\core\names.js" />
+    <None Include="module\blockly\dobots\msg\nb.js" />
+    <None Include="module\blockly\msg\js\nb.js" />
+    <None Include="module\blockly\msg\json\nb.json" />
+    <None Include="module\blockly\dobots\msg\nl.js" />
+    <None Include="module\blockly\msg\js\nl.js" />
+    <None Include="module\blockly\msg\json\nl.json" />
+    <None Include="module\blockly\dobots\msg\oc.js" />
+    <None Include="module\blockly\msg\js\oc.js" />
+    <None Include="module\blockly\msg\json\oc.json" />
+    <None Include="VisionVoice\images\od_intro.jpg" />
+    <None Include="module\blockly\core\options.js" />
+    <None Include="module\blockly\package.json" />
+    <None Include="module\blockly\generators\php.js" />
+    <None Include="module\blockly\php_compressed.js" />
+    <None Include="module\blockly\dobots\msg\pl.js" />
+    <None Include="module\blockly\msg\js\pl.js" />
+    <None Include="module\blockly\msg\json\pl.json" />
+    <None Include="Component\plane2d.png" />
+    <None Include="module\blockly\dobots\msg\pms.js" />
+    <None Include="module\blockly\msg\js\pms.js" />
+    <None Include="module\blockly\msg\json\pms.json" />
+    <None Include="VisionVoice\images\posture2.png" />
+    <None Include="VisionVoice\images\posture_intro.jpg" />
+    <None Include="VisionVoice\images\posture_logo.png" />
+    <None Include="module\blockly\dobots\prettify.css" />
+    <None Include="module\blockly\dobots\prettify.js" />
+    <None Include="module\blockly\blocks\procedures.js" />
+    <None Include="module\blockly\core\procedures.js" />
+    <None Include="module\blockly\generators\dart\procedures.js" />
+    <None Include="module\blockly\generators\javascript\procedures.js" />
+    <None Include="module\blockly\generators\lua\procedures.js" />
+    <None Include="module\blockly\generators\php\procedures.js" />
+    <None Include="module\blockly\generators\python\procedures.js" />
+    <None Include="module\blockly\dobots\msg\pt-br.js" />
+    <None Include="module\blockly\msg\js\pt-br.js" />
+    <None Include="module\blockly\msg\json\pt-br.json" />
+    <None Include="module\blockly\msg\js\pt.js" />
+    <None Include="module\blockly\msg\json\pt.json" />
+    <None Include="module\blockly\dobots\blocks\publick_basic.js" />
+    <None Include="module\blockly\dobots\blocks\publick_io.js" />
+    <None Include="module\blockly\dobots\blocks\publick_move.js" />
+    <None Include="module\blockly\generators\python.js" />
+    <None Include="module\blockly\python_compressed.js" />
+    <None Include="Component\qipao.png" />
+    <QtRcc Include="qml.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qml</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qml</InitFuncName>
+    </QtRcc>
+    <None Include="module\blockly\msg\json\qqq.json" />
+    <None Include="module\blockly\media\quote0.png" />
+    <None Include="module\blockly\media\quote1.png" />
+    <None Include="module\blockly\dobots\qwebchannel.js" />
+    <None Include="module\blockly\appengine\redirect.html" />
+    <None Include="module\blockly\core\rendered_connection.js" />
+    <None Include="module\blockly\dobots\msg\ro.js" />
+    <None Include="module\blockly\msg\js\ro.js" />
+    <None Include="module\blockly\msg\json\ro.json" />
+    <None Include="module\blockly\appengine\robots.txt" />
+    <None Include="module\blockly\dobots\msg\ru.js" />
+    <None Include="module\blockly\msg\js\ru.js" />
+    <None Include="module\blockly\msg\json\ru.json" />
+    <None Include="module\blockly\dobots\msg\sc.js" />
+    <None Include="module\blockly\msg\js\sc.js" />
+    <None Include="module\blockly\msg\json\sc.json" />
+    <None Include="module\blockly\core\scrollbar.js" />
+    <None Include="module\blockly\msg\js\sd.js" />
+    <None Include="module\blockly\msg\json\sd.json" />
+    <QtRcc Include="sensor.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sensor</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sensor</InitFuncName>
+    </QtRcc>
+    <None Include="module\blockly\msg\js\shn.js" />
+    <None Include="module\blockly\msg\json\shn.json" />
+    <None Include="module\blockly\dobots\msg\sk.js" />
+    <None Include="module\blockly\msg\js\sk.js" />
+    <None Include="module\blockly\msg\json\sk.json" />
+    <None Include="module\blockly\msg\js\sl.js" />
+    <None Include="module\blockly\msg\json\sl.json" />
+    <None Include="module\blockly\media\sprites.png" />
+    <None Include="module\blockly\media\sprites.svg" />
+    <None Include="module\blockly\msg\js\sq.js" />
+    <None Include="module\blockly\msg\json\sq.json" />
+    <None Include="module\blockly\dobots\msg\sr.js" />
+    <None Include="module\blockly\msg\js\sr.js" />
+    <None Include="module\blockly\msg\json\sr.json" />
+    <None Include="images\still.jpg" />
+    <None Include="images\still.png" />
+    <None Include="module\blockly\appengine\storage.js" />
+    <None Include="module\blockly\dobots\storage.js" />
+    <None Include="module\blockly\appengine\storage.py" />
+    <None Include="module\blockly\dobots\style.css" />
+    <None Include="module\blockly\dobots\msg\sv.js" />
+    <None Include="module\blockly\msg\js\sv.js" />
+    <None Include="module\blockly\msg\json\sv.json" />
+    <None Include="module\blockly\msg\json\synonyms.json" />
+    <None Include="module\blockly\dobots\msg\ta.js" />
+    <None Include="module\blockly\msg\js\ta.js" />
+    <None Include="module\blockly\msg\json\ta.json" />
+    <None Include="module\blockly\msg\js\tcy.js" />
+    <None Include="module\blockly\msg\json\tcy.json" />
+    <None Include="module\blockly\i18n\tests.py" />
+    <None Include="module\blockly\blocks\text.js" />
+    <None Include="module\blockly\generators\dart\text.js" />
+    <None Include="module\blockly\generators\javascript\text.js" />
+    <None Include="module\blockly\generators\lua\text.js" />
+    <None Include="module\blockly\generators\php\text.js" />
+    <None Include="module\blockly\generators\python\text.js" />
+    <None Include="module\blockly\dobots\msg\th.js" />
+    <None Include="module\blockly\msg\js\th.js" />
+    <None Include="module\blockly\msg\json\th.json" />
+    <None Include="Component\timg.png" />
+    <None Include="module\blockly\msg\js\tl.js" />
+    <None Include="module\blockly\msg\json\tl.json" />
+    <None Include="module\blockly\dobots\msg\tlh.js" />
+    <None Include="module\blockly\msg\js\tlh.js" />
+    <None Include="module\blockly\msg\json\tlh.json" />
+    <None Include="module\blockly\accessible\toolbox-tree.component.js" />
+    <None Include="module\blockly\accessible\toolbox.component.js" />
+    <None Include="module\blockly\core\toolbox.js" />
+    <None Include="module\blockly\core\tooltip.js" />
+    <None Include="module\blockly\dobots\msg\tr.js" />
+    <None Include="module\blockly\msg\js\tr.js" />
+    <None Include="module\blockly\msg\json\tr.json" />
+    <None Include="module\blockly\accessible\translate.pipe.js" />
+    <None Include="module\blockly\core\trashcan.js" />
+    <None Include="module\blockly\accessible\tree.service.js" />
+    <None Include="module\blockly\dobots\msg\uk.js" />
+    <None Include="module\blockly\msg\js\uk.js" />
+    <None Include="module\blockly\msg\json\uk.json" />
+    <None Include="VisionVoice\images\useguide.jpg" />
+    <None Include="module\blockly\core\utils.js" />
+    <None Include="module\blockly\accessible\utils.service.js" />
+    <None Include="module\blockly\blocks\variables.js" />
+    <None Include="module\blockly\core\variables.js" />
+    <None Include="module\blockly\generators\dart\variables.js" />
+    <None Include="module\blockly\generators\javascript\variables.js" />
+    <None Include="module\blockly\generators\lua\variables.js" />
+    <None Include="module\blockly\generators\php\variables.js" />
+    <None Include="module\blockly\generators\python\variables.js" />
+    <None Include="module\blockly\dobots\msg\vi.js" />
+    <None Include="module\blockly\msg\js\vi.js" />
+    <None Include="module\blockly\msg\json\vi.json" />
+    <QtRcc Include="visionvoice.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">visionvoice</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">visionvoice</InitFuncName>
+    </QtRcc>
+    <None Include="module\blockly\core\warning.js" />
+    <None Include="module\blockly\core\widgetdiv.js" />
+    <None Include="module\blockly\accessible\workspace-tree.component.js" />
+    <None Include="module\blockly\accessible\workspace.component.js" />
+    <None Include="module\blockly\core\workspace.js" />
+    <None Include="module\blockly\core\workspace_svg.js" />
+    <None Include="module\blockly\i18n\xliff_to_json.py" />
+    <None Include="module\blockly\core\xml.js" />
+    <None Include="module\blockly\dobots\msg\zh-hans.js" />
+    <None Include="module\blockly\msg\js\zh-hans.js" />
+    <None Include="module\blockly\msg\json\zh-hans.json" />
+    <None Include="module\blockly\dobots\msg\zh-hant.js" />
+    <None Include="module\blockly\msg\js\zh-hant.js" />
+    <None Include="module\blockly\msg\json\zh-hant.json" />
+    <None Include="module\blockly\core\zoom_controls.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="experiment_src\PersonExperiment\PersonExperiment.hpp">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtMoc Include="openfile.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+    </QtMoc>
+    <QtMoc Include="experiment_src\FaceExperiment\FaceExperiment.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+    </QtMoc>
+    <ClInclude Include="experiment_src\FaceExperiment\fastmtcnn.h" />
+    <ClInclude Include="experiment_src\Tools\Tools.hpp">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;D:\Program Files (x86)\dlib-19.16;$(NOINHERIT)</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;D:\Program Files (x86)\dlib-19.16;$(NOINHERIT)</IncludePath>
+    </ClInclude>
+    <ClInclude Include="src\camera.hpp" />
+    <ClInclude Include="src\Detection\detection.h" />
+    <ClInclude Include="src\Detection\Posture.h" />
+    <ClInclude Include="src\Detection\TensorflowConfig.h" />
+    <ClInclude Include="src\imageprovider.h" />
+    <ClInclude Include="src\ZhSupport.h" />
+    <QtMoc Include="src\SaveFaceName.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <QtMoc Include="src\imageshow.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\debug;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</Define>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;$(QTDIR)\include\QtWebEngine;$(QTDIR)\include\QtWebEngineCore;$(QTDIR)\include\QtQuick;$(QTDIR)\include\QtMultimediaWidgets;$(QTDIR)\include\QtMultimedia;$(QTDIR)\include\QtCharts;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtWebView;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtWebChannel;$(QTDIR)\include\QtQml;$(QTDIR)\include\QtWebSockets;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\QtSerialPort;$(QTDIR)\include\QtSensors;$(QTDIR)\include\QtPositioning;$(QTDIR)\include\QtCore;.\release;C:\VulkanSDK\1.0.51.0\include;$(QTDIR)\mkspecs\win32-msvc;E:\VS2017_lib\dlib-19.16</IncludePath>
+      <Define Condition="'$(Configuration)|$(Platform)'=='Release|x64'">_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;QT_DEPRECATED_WARNINGS;QT_NO_DEBUG;QT_WEBENGINE_LIB;QT_WEBENGINECORE_LIB;QT_QUICK_LIB;QT_MULTIMEDIAWIDGETS_LIB;QT_MULTIMEDIA_LIB;QT_CHARTS_LIB;QT_WIDGETS_LIB;QT_WEBVIEW_LIB;QT_GUI_LIB;QT_WEBCHANNEL_LIB;QT_QML_LIB;QT_WEBSOCKETS_LIB;QT_NETWORK_LIB;QT_SERIALPORT_LIB;QT_SENSORS_LIB;QT_POSITIONING_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</Define>
+    </QtMoc>
+    <ClInclude Include="src\tracking\external_lib.hpp" />
+    <ClInclude Include="src\tracking\kcftracker.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="MachineLearn\images\folder.png" />
+    <Image Include="Sensor\DroneSensor\images\BaroGuidePage.jpg" />
+    <Image Include="VisionVoice\images\connection_1.png" />
+    <Image Include="VisionVoice\images\connection_2.png" />
+    <Image Include="VisionVoice\images\connection_error.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_x64="msvc2017_64" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

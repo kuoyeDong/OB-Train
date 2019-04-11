@@ -1,0 +1,2007 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\vision_src">
+      <UniqueIdentifier>{a707bf8d-5481-4824-b9a6-5ee3a8707e82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vision_src\tracking">
+      <UniqueIdentifier>{6cd84c30-2e36-444b-bcaa-7f79d74e66e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vision_src\detection">
+      <UniqueIdentifier>{145ac8eb-943a-4607-b68b-58129fe5539f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vision_src">
+      <UniqueIdentifier>{f9839511-f02b-4da7-86e7-37a2a7758ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vision_src\tracking">
+      <UniqueIdentifier>{2fd83fdf-367a-428c-a97b-661c6bcd16f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\vision_src\detection">
+      <UniqueIdentifier>{e5c18e06-774a-41f3-beb4-a604cf322a6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\experiment_src">
+      <UniqueIdentifier>{f4660477-06dd-4643-a0c2-39c4aeef3273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\experiment_src\PersonExperiment">
+      <UniqueIdentifier>{f9bc2ec3-360c-4e3b-bcf9-09fda95ba0b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\experiment_src">
+      <UniqueIdentifier>{f469e53c-53d2-4a04-9ee5-663cb2666099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\experiment_src\PersonExperiment">
+      <UniqueIdentifier>{a02295b5-e270-49ef-97a3-e2133573ccbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\experiment_src\Tools">
+      <UniqueIdentifier>{8f01c377-a747-4c54-bab7-ff8aee09814c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\experiment_src\Tools">
+      <UniqueIdentifier>{c4e04699-ab8a-4095-b864-7b08b240f597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\experiment_src\FaceExperiment">
+      <UniqueIdentifier>{7dffd67a-7b5b-4831-af3d-fbd54658ee4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\experiment_src\FaceExperiment">
+      <UniqueIdentifier>{bbbc25cc-51ad-4c08-80be-e89b611198c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="datafresh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jsapiobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="portmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="serialtest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="systemopen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Detection\detection.cpp">
+      <Filter>Source Files\vision_src\detection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Detection\Posture.cpp">
+      <Filter>Source Files\vision_src\detection</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tracking\kcftracker.cpp">
+      <Filter>Source Files\vision_src\tracking</Filter>
+    </ClCompile>
+    <ClCompile Include="src\camera.cpp">
+      <Filter>Source Files\vision_src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imageprovider.cpp">
+      <Filter>Source Files\vision_src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\imageshow.cpp">
+      <Filter>Source Files\vision_src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SaveFaceName.cpp">
+      <Filter>Source Files\vision_src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ZhSupport.cpp">
+      <Filter>Source Files\vision_src</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentOne.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\PersonExperiment.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="openfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentTwo.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\Tools\Tools.cpp">
+      <Filter>Source Files\experiment_src\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment1.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment2.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\fastmtcnn.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentThree.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\PersonExperiment\ExperimentFour.cpp">
+      <Filter>Source Files\experiment_src\PersonExperiment</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="datafresh.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="jsapiobject.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="portmodel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="serialtest.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="systemopen.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="websockettransport.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="src\imageshow.h">
+      <Filter>Header Files\vision_src</Filter>
+    </QtMoc>
+    <QtMoc Include="src\SaveFaceName.h">
+      <Filter>Header Files\vision_src</Filter>
+    </QtMoc>
+    <QtMoc Include="experiment_src\PersonExperiment\PersonExperiment.hpp">
+      <Filter>Header Files\experiment_src\PersonExperiment</Filter>
+    </QtMoc>
+    <QtMoc Include="openfile.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="experiment_src\FaceExperiment\FaceExperiment.h">
+      <Filter>Header Files\experiment_src\FaceExperiment</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="module\blockly\media\1x1.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\AI_ML.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\APP.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\APP.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\APP.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\APP.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\APP.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\APP.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\APP.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\APP.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\APP.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\AlphaGo.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\Arm.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Arm.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\Barometers.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\Barometers.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\BasicNet.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\images\Binocular.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\Binocular.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\CNN.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\Calibration.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\Camera.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\Camera.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\images\Card.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\Card.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\CharViewPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\CompassUi.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\Connection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\Connection.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\Connection.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Connection.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\Cruiser.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\Cruiser.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\UartData\DataBasicRecAndSendPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\UartData\DataSaveCompletedPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\images\DataTrain.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\DataTrain.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\Doubler.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\Doubler.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\Drone.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\images\Drone.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\Drone.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\DroneCharViewPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DroneControl.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\DroneControlPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\DroneDataApplicatePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DroneGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\DroneGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\DroneInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\DronePage\DroneProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\DroneSensor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\EarthMagCa.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Face.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\FaceDetect.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\FaceGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\FaceGuidePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\FacePresent.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\FaceRegisterPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\FaceUnlock.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\FaceUseGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\GPS.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GPS.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GPSPage\GPSDataApplicatePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GPSGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\GPSGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GPSPage\GPSInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GPSPage\GPSProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\GestureGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\GestureGuidePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\GoableNet.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\GoableNet.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\Gyro.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\Gyro.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\Gyro.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\Gyro.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\GyroGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\images\HandPrint.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\HandPrint.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMU2D.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMU2DHEADING.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMUCharViewPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMUControlPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMUDataApplicatePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\IMUGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMUInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\IMUPage\IMUProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\Infrared.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\images\Infrared.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\Infrared.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\Infrared.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\Infrared.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\Infrared.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\Interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\Interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\Interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\Interface.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\Interface.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\Interface.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Interface.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Interface.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\images\Iot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\IotPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\IotSensor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\LICENSE">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\LocalNet.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\ML.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\ML_Human.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\MachineLearnPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\Mag.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagCalibrationPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagCharViewPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagControlPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagDataApplicatePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagDataPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\PresentPage\MagFlow.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\MagGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\PresentPage\MagPresent.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\MagPage\MagProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\images\Model.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\images\Model.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\Model.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\Model.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Drone\Model.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Iot\Model.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Model.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Model.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\images\ModelGenerate.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\images\OBOX.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\OBVideo.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\Obox.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\OpticalFlow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\OpticalFlow.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\images\Pannel.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\Pannel.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Person.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\PersonControl.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\PersonGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PersonGuidePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\PersonPresent.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\Posture.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Posture_Teaching.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\QRC.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\QRC.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\QmlToggleButton.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\README.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\README.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\README">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\RFSetPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\Radar.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\Radar.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\images\Robot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\images\Robot.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Robot.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\RobotPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\RobotSensor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\libs\Rx.umd.min.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\SensorPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="SerialPortRefresh.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\images\Socket.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\IotSensor\Socket.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\images\StreamTrans.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\StreamTrans.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\SwipeViewPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Tracking_Teaching.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\images\TrainVerify.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\TrainVerify.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\Ultrasonic.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\images\Ultrasonic.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\Ultrasonic.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\RobotSensor\Ultrasonic.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\PresentPage\UseGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\VVPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\VideoPlayer.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\VideoPlayerDBW.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\VideoPlayerTest.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\images\VisionVoice.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\VisionVoiceSensor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Vision_Examples_Posture.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Vision_Examples_Tracking.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Voice.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\images\VoiceVerify.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\VoiceVerify.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\VisionVoiceSensor\VoiceVerify.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\accessible.css">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\libs\angular2-all.umd.min.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\libs\angular2-polyfills.min.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\app.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\app.yaml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\apple-touch-icon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ar.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ar.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ar.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\arrow.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\az.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\az.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ba.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ba.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\background.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\background3.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\bcc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\bcc.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\be-tarask.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\be-tarask.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\be-tarask.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\bg.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\bg.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\block.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\block_render_svg.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\block_svg.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\blockly.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blockly_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blockly_uncompressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\blocks.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\bn.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\bn.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\br.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\br.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\br.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\brain.jpeg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\bubble.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\build.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ca.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ca.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ca.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\cameraConnect.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\click.mp3">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\click.ogg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\click.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\clipboard.service.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\code.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\comment.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\common.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\compass.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\connection.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\connection_db.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\constants.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\contextmenu.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\corner.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\create_messages.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\cs.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\cs.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\cs.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\css.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\da.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\da.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\da.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dart_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\de.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\de.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\de.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\dedup_json.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\delete.mp3">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\delete.ogg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\delete.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\disconnect.mp3">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\disconnect.ogg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\disconnect.wav">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\dobot.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\dog.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="drone.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="Sensor\DroneSensor\images\earthMag.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\el.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\el.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\el.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\en.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\en.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\en.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\es.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\es.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\es.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\libs\es6-shim.min.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\events.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\fa.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\fa.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\fa.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\face.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\face1.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\face2.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\favicon.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\feature_hand.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\fi.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\fi.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\field.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_angle.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_checkbox.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_colour.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_date.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_dropdown.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_image.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_label.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_number.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_textinput.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\field_variable.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\flow.PNG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\flyout.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\fr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\fr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\fr.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\framework.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\generator.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\handclosed.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\handdelete.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\handopen.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\he.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\he.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\he.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\hi.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\hi.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\hrx.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\hrx.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\hrx.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\hu.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\hu.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\hu.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ia.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ia.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ia.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\icon.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\icon.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\icons.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\id.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\id.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\index.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\index.yaml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\index_redirect.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\inject.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\input.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro1.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro2.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro3.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro4.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro5.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro6.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro7.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\intro8.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\is.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\is.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\is.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\it.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\it.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\it.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ja.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ja.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ja.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\javascript_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\js_to_json.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\json_to_js.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ko.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ko.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ko.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\lb.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\lb.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\lists.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\lki.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\lki.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\logic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\loops.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\lrc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\lrc.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\lt.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\lt.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\lua_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="machinelearning.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="Sensor\DroneSensor\images\mag.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\mag1.png.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\images\magVerify.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="main.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\math.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\messages.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\messages.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\mk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\mk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\mk.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="module.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="module\blockly\dobots\msg\ms.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ms.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ms.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\msg.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\mutator.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\names.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\nb.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\nb.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\nb.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\nl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\nl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\nl.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\oc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\oc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\oc.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\od_intro.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\options.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\package.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\php_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\pl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\pl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\pl.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\plane2d.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\pms.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\pms.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\pms.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\posture2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\posture_intro.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\posture_logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\prettify.css">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\prettify.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\procedures.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\pt-br.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\pt-br.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\pt-br.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\pt.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\pt.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\blocks\publick_basic.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\blocks\publick_io.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\blocks\publick_move.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\python_compressed.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\qipao.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="qml.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="module\blockly\msg\json\qqq.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\quote0.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\quote1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\qwebchannel.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\redirect.html">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\rendered_connection.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ro.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ro.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ro.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\robots.txt">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ru.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ru.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ru.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\sc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sc.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sc.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\scrollbar.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sd.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sd.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="sensor.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="module\blockly\msg\js\shn.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\shn.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\sk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sk.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sl.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\sprites.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\media\sprites.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sq.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sq.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\sr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sr.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\still.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="images\still.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\storage.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\storage.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\appengine\storage.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\style.css">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\sv.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\sv.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\sv.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\synonyms.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\ta.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\ta.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\ta.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\tcy.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\tcy.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\tests.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\text.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\th.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\th.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\th.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\timg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\tl.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\tl.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\tlh.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\tlh.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\tlh.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\toolbox-tree.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\toolbox.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\toolbox.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\tooltip.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\tr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\tr.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\tr.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\translate.pipe.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\trashcan.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\tree.service.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\uk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\uk.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\uk.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\images\useguide.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\utils.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\utils.service.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\blocks\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\dart\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\javascript\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\lua\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\php\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\generators\python\variables.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\vi.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\vi.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\vi.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="visionvoice.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="module\blockly\core\warning.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\widgetdiv.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\workspace-tree.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\accessible\workspace.component.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\workspace.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\workspace_svg.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\i18n\xliff_to_json.py">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\xml.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\zh-hans.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\zh-hans.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\zh-hans.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\dobots\msg\zh-hant.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\js\zh-hant.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\msg\json\zh-hant.json">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="module\blockly\core\zoom_controls.js">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Component\FaceChangePage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage1.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage2.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage3.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage4.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage5.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage6.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage7.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage8.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage9.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sensor\DroneSensor\BarometersGuide.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\VisionExperiment.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Person_Experiment_List.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_Five.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_Four.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_One.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_Six.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_Three.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="MachineLearn\PersionExperiment\Experiment_Two.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Detection\detection.h">
+      <Filter>Header Files\vision_src\detection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Detection\Posture.h">
+      <Filter>Header Files\vision_src\detection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Detection\TensorflowConfig.h">
+      <Filter>Header Files\vision_src\detection</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tracking\external_lib.hpp">
+      <Filter>Header Files\vision_src\tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tracking\kcftracker.hpp">
+      <Filter>Header Files\vision_src\tracking</Filter>
+    </ClInclude>
+    <ClInclude Include="src\camera.hpp">
+      <Filter>Header Files\vision_src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\imageprovider.h">
+      <Filter>Header Files\vision_src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ZhSupport.h">
+      <Filter>Header Files\vision_src</Filter>
+    </ClInclude>
+    <ClInclude Include="experiment_src\Tools\Tools.hpp">
+      <Filter>Header Files\experiment_src\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="experiment_src\FaceExperiment\fastmtcnn.h">
+      <Filter>Header Files\experiment_src\FaceExperiment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Sensor\DroneSensor\images\BaroGuidePage.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="VisionVoice\images\connection_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="VisionVoice\images\connection_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="VisionVoice\images\connection_error.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="MachineLearn\images\folder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

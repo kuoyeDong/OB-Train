@@ -1,0 +1,40 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MachineLearn/images/DataTrain.png</file>
+        <file>MachineLearn/images/ModelGenerate.png</file>
+        <file>MachineLearn/images/TrainVerify.png</file>
+        <file>MachineLearn/DataTrain.qml</file>
+        <file>MachineLearn/MachineLearnPage.qml</file>
+        <file>MachineLearn/TrainVerify.qml</file>
+        <file>MachineLearn/images/PersonControl.png</file>
+        <file>MachineLearn/images/FaceUnlock.png</file>
+        <file>MachineLearn/VisionExperiment.qml</file>
+        <file>MachineLearn/PersionExperiment/Person_Experiment_List.qml</file>
+        <file>MachineLearn/PersionExperiment/Experiment_One.qml</file>
+        <file>MachineLearn/PersionExperiment/Experiment_Five.qml</file>
+        <file>MachineLearn/PersionExperiment/Experiment_Four.qml</file>
+        <file>MachineLearn/PersionExperiment/Experiment_Three.qml</file>
+        <file>MachineLearn/PersionExperiment/Experiment_Two.qml</file>
+        <file>MachineLearn/images/play.png</file>
+        <file>MachineLearn/images/recording.png</file>
+        <file>MachineLearn/images/folder.png</file>
+        <file>MachineLearn/images/dark.png</file>
+        <file>MachineLearn/images/light.png</file>
+        <file>MachineLearn/images/flip.png</file>
+        <file>MachineLearn/images/rect.png</file>
+        <file>MachineLearn/images/pro.png</file>
+        <file>MachineLearn/images/src.png</file>
+        <file>MachineLearn/images/down.png</file>
+        <file>MachineLearn/images/left.png</file>
+        <file>MachineLearn/images/right.png</file>
+        <file>MachineLearn/images/up.png</file>
+        <file>MachineLearn/FaceExperiment/Face_Experiment_List.qml</file>
+        <file>MachineLearn/FaceExperiment/FaceExp1.qml</file>
+        <file>MachineLearn/FaceExperiment/FaceExp2.qml</file>
+        <file>MachineLearn/FaceExperiment/FaceExp3.qml</file>
+        <file>MachineLearn/FaceExperiment/FaceExp4.qml</file>
+        <file>MachineLearn/FaceExperiment/FaceExp5.qml</file>
+        <file>MachineLearn/images/function.png</file>
+        <file>MachineLearn/images/humanModel.png</file>
+    </qresource>
+</RCC>
