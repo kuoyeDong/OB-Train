@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
+	QCoreApplication::addLibraryPath("./plugins");
     QApplication  app(argc, argv);
-
 	ShowImage CodeImage_Face;
 	ShowImage CodeImage_Tracking;
 	ShowImage CodeImage_Posture;
