@@ -64,7 +64,7 @@ Item {
         onPressed: {
             //fileDialog.open();
             //timer1.stop();
-            mydataFresh.buttonSaveClick("\\Content_resource\\OB整机\\数据保存\\", textArea.text);
+            mydataFresh.buttonSaveClick("\\Content_resource\\drone\\data\\", textArea.text);
             //timer1.start();
             datasavecompletedw.show();
         }
@@ -102,16 +102,16 @@ Item {
         }
     }
 
-    FileDialog{
-        id: fileDialog
-        title: qsTr("文件保存")
-        nameFilters: "*.txt"
-        selectExisting: false
-        //fileMode: FileDialog.SaveFile
-        onAccepted: {
+//    FileDialog{
+//        id: fileDialog
+//        title: qsTr("文件保存")
+//        nameFilters: "*.txt"
+//        selectExisting: false
+//        //fileMode: FileDialog.SaveFile
+//        onAccepted: {
 
-        }
-    }
+//        }
+//    }
 
     MyDataFresh{
         id:mydataFresh
@@ -140,7 +140,7 @@ Item {
         font.pointSize: 22
         enabled: true
         onPressed: {
-            mydataFresh.buttonOpenFolderClick("\\Content_resource\\OB整机\\数据保存\\");
+            mydataFresh.buttonOpenFolderClick("\\Content_resource\\drone\\data\\");
         }
     }
 

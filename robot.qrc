@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Robot/BDCmotor/BDCmotorInfoPage.qml</file>
+        <file>Robot/BDCmotor/BDCmotorProjectDevelopPage.qml</file>
+        <file>Robot/Carmotor/CarmotorInfoPage.qml</file>
+        <file>Robot/Carmotor/CarmotorProjectDevelopPage.qml</file>
+        <file>Robot/images/APP.png</file>
+        <file>Robot/images/Arm.png</file>
+        <file>Robot/images/background.png</file>
+        <file>Robot/images/BDCmotor.png</file>
+        <file>Robot/images/BLDC.png</file>
+        <file>Robot/images/Connection.png</file>
+        <file>Robot/images/Interface.png</file>
+        <file>Robot/images/Model.png</file>
+        <file>Robot/images/Robot.png</file>
+        <file>Robot/images/stepmotor.png</file>
+        <file>Robot/images/stepmotor1.png</file>
+        <file>Robot/Stepmotor/StepmotorInfoPage.qml</file>
+        <file>Robot/Stepmotor/StepmotorProjectDevelopPage.qml</file>
+        <file>Robot/APP.qml</file>
+        <file>Robot/Arm.qml</file>
+        <file>Robot/BDCmotor.qml</file>
+        <file>Robot/Carmotor.qml</file>
+        <file>Robot/Connection.qml</file>
+        <file>Robot/Interface.qml</file>
+        <file>Robot/Model.qml</file>
+        <file>Robot/MovingRobot.qml</file>
+        <file>Robot/Robot.qml</file>
+        <file>Robot/RobotPage.qml</file>
+        <file>Robot/Stepmotor.qml</file>
+    </qresource>
+</RCC>

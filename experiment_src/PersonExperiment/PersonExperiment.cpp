@@ -104,7 +104,7 @@ void PersonExperiment::expStart()
 	}
 
 	//สตั้ฮๅ
-	if (!frame.empty() && current_experiment == 5)
+	if (current_experiment == 5)
 	{
 		experiment_five(imagePath, generalPath, frame, current_app_id);
 	}

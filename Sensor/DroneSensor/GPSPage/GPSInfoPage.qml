@@ -30,7 +30,7 @@ ApplicationWindow {
 
         onClicked:
         {
-            mySystemOpenReg.openFile("/Content_resource/GPS模组/教学资料/教学PPT/GPS模组PPT.ppt");
+            mySystemOpenReg.openFile("/Content_resource/gps/material/ppt/gps.ppt");
         }
     }
 
@@ -55,7 +55,7 @@ ApplicationWindow {
             anchors.fill: parent
             anchors.bottomMargin: -1
             onPressed: {
-                mySystemOpenReg.openFile("/Content_resource/GPS模组/教学资料/教学视频");
+                mySystemOpenReg.openFile("/Content_resource/gps/material/video");
             }
         }
     }
@@ -75,7 +75,7 @@ ApplicationWindow {
                 anchors.fill: parent
                 anchors.bottomMargin: 1
                 onPressed: {
-                    mySystemOpenReg.openFile("/Content_resource/GPS模组/教学资料/其他资料");
+                    mySystemOpenReg.openFile("/Content_resource/gps/material/others");
                 }
             }
         }

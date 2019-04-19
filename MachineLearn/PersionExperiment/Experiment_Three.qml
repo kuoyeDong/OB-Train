@@ -354,8 +354,8 @@ Page {
                 if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
                 {
                     trainStatus.text = qsTr("未
-    设置
-    参数");
+设置
+参数");
                 }
                 else
                 {
@@ -395,8 +395,8 @@ Page {
                 if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
                 {
                     trainStatus.text = qsTr("未
-    设置
-    参数");
+设置
+参数");
                 }
                 else
                 {
@@ -435,8 +435,8 @@ Page {
                 if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
                 {
                     trainStatus.text = qsTr("未
-    设置
-    参数");
+设置
+参数");
                 }
                 else
                 {
@@ -475,8 +475,8 @@ Page {
                 if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
                 {
                     trainStatus.text = qsTr("未
-    设置
-    参数");
+设置
+参数");
                 }
                 else
                 {
@@ -733,7 +733,7 @@ Page {
                     ExpImage.exp3Param(0, 1, 1, input_lrrate.text);
                 }
                 trainStatus.text = qsTr("参数
-    已重置")
+已重置")
             }
         }
     }

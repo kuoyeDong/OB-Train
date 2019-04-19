@@ -24,5 +24,10 @@
         <file>Drone/DronePage/DroneProjectDevelopPage.qml</file>
         <file>test.js</file>
         <file>Drone/DronePage/DRONE2D.qml</file>
+        <file>Drone/ESCmotor.qml</file>
+        <file>Drone/images/ESCmotor.gif</file>
+        <file>Drone/DronePage/DRONEHEADING.qml</file>
+        <file>Drone/ESCmotor/ESCInfoPage.qml</file>
+        <file>Drone/ESCmotor/ESCProjectDevelopPage.qml</file>
     </qresource>
 </RCC>

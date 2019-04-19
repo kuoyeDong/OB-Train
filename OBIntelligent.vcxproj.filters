@@ -157,6 +157,15 @@
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentFive.cpp">
       <Filter>Source Files\experiment_src\PersonExperiment</Filter>
     </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment3.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment4.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
+    <ClCompile Include="experiment_src\FaceExperiment\Image_to_BinaryData.cpp">
+      <Filter>Source Files\experiment_src\FaceExperiment</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="datafresh.h">
@@ -1957,6 +1966,36 @@
     <None Include="MachineLearn\PersionExperiment\Experiment_Two.qml">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="Robot\BDCmotor\BDCmotorInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\BDCmotor\BDCmotorProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Carmotor\CarmotorInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Carmotor\CarmotorProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Stepmotor\StepmotorInfoPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Stepmotor\StepmotorProjectDevelopPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\BDCmotor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Carmotor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\MovingRobot.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Robot\Stepmotor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Detection\detection.h">
@@ -2006,5 +2045,25 @@
     <Image Include="MachineLearn\images\folder.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Robot\images\background.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Robot\images\BDCmotor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Robot\images\BLDC.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Robot\images\stepmotor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Robot\images\stepmotor1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="robot.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>

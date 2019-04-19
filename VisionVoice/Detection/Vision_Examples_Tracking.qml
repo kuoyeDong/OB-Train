@@ -296,7 +296,7 @@ Page {
          font.pointSize: 20
 
          onClicked: {
-             system_open_visual_program.openFile("/Content_resource/Tracking/教学资料/教学视频/Tracking.MOV");
+             system_open_visual_program.openFile("/Content_resource/Tracking/video/Tracking.MOV");
          }
      }
 }

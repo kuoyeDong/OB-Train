@@ -39,6 +39,7 @@ Page {
                 //                qmlToggleButton.color = "#CCCCCC";
 
             }
+            myclassExposeByRegType.setCurrentPage(0);//清除页面设置
             stack.pop()
         }
     }
@@ -206,7 +207,7 @@ Page {
         font.pointSize: 22
         onPressed: {
 
-            imuinfopage_tips.show();
+            accinfopage_tips.show();
             myclassExposeByRegType.sendCMD("27", "808080800800", "0000000000000000");
             cnt_timer=0;
             timer_set_lab_acc.start();
@@ -254,7 +255,7 @@ Page {
             else if(cnt_timer>=19)
             {
                 timer_set_lab_acc.stop();
-                imuinfopage_tips.close();
+                accinfopage_tips.close();
                 if(mydataFresh.serialDataPrintFlag == true){
                     mydataFresh.serialDataPrintFlag = false;
                     button_save.enabled = true;
@@ -480,7 +481,7 @@ Page {
         enabled: true
 
         onPressed: {
-            mydataFresh.buttonSaveClick("\\Content_resource\\IMU模组\\数据保存\\", textArea.text);
+            mydataFresh.buttonSaveClick("\\Content_resource\\accelerometer\\data\\", textArea.text);
             datasavecompletedw.show();
         }
     }
@@ -554,7 +555,7 @@ Page {
         font.pointSize: 22
         enabled: true
         onPressed: {
-            mydataFresh.buttonOpenFolderClick("\\Content_resource\\IMU模组\\数据保存\\");
+            mydataFresh.buttonOpenFolderClick("\\Content_resource\\accelerometer\\data\\");
         }
     }
 

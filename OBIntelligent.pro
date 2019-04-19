@@ -74,7 +74,8 @@ RESOURCES += \
     module.qrc \
     drone.qrc \
     visionvoice.qrc \
-    machinelearning.qrc
+    machinelearning.qrc \
+    robot.qrc
 
 
 # Additional import path used to resolve QML modules in Qt Creator's code model

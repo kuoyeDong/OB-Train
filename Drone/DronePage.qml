@@ -8,6 +8,7 @@
 import QtQuick 2.8
 import QtQuick.Controls 2.1
 
+import RegisterMyType 1.0
 
 Page {
 
@@ -36,6 +37,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("航拍机")
+            display: AbstractButton.IconOnly
 
 
             background: Image {
@@ -43,6 +45,7 @@ Page {
             }
 
             onClicked: {
+                myclassExposeByRegType.setCurrentPage(7);//打开无人机整机界面
                 page1.visible = true;
                 page1.stack = stack;
                 stack.push(page1)
@@ -51,11 +54,12 @@ Page {
 
         Button {
             id: button1
-            x: 827
-            y: 134
-            width: 250
-            height: 250
+            x: 833
+            y: 145
+            width: 239
+            height: 228
             text: qsTr("巡航机")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/Cruiser.png"
@@ -75,6 +79,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("折叠机")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/Doubler.png"
@@ -94,12 +99,14 @@ Page {
             width: 250
             height: 250
             text: qsTr("传感模组")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/Model.png"
             }
 
             onClicked: {
+                myclassExposeByRegType.setCurrentPage(14);//打开电调界面
                 page4.visible = true;
                 page4.stack = stack;
                 stack.push(page4)
@@ -113,6 +120,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("配件软硬接口")
+            display: AbstractButton.IconOnly
             transformOrigin: Item.Center
 
             background: Image {
@@ -135,6 +143,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("APP实现")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/APP.png"
@@ -147,9 +156,69 @@ Page {
             }
         }
 
+        Text {
+            id: element4
+            x: 357
+            y: 391
+            text: qsTr("整机设计")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element3
+            x: 357
+            y: 794
+            text: qsTr("旋翼电调")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element5
+            x: 873
+            y: 794
+            text: qsTr("配套硬件")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element6
+            x: 1387
+            y: 782
+            text: qsTr("APP控制")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element7
+            x: 1397
+            y: 391
+            text: qsTr("折叠机")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element8
+            x: 872
+            y: 391
+            text: qsTr("巡航机")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+
     }
 
-    DroneGuide {
+    MyClassType
+    {
+        id:myclassExposeByRegType
+    }
+
+    DroneControl {
         id: page1
         visible: false
     }
@@ -164,10 +233,10 @@ Page {
         visible: false
     }
 
-    Model {
-        id: page4
-        visible: false
-    }
+    //    Model {
+    //        id: page4
+    //        visible: false
+    //    }
 
     Interface{
         id: page5
@@ -178,7 +247,20 @@ Page {
         id: page6
         visible: false
     }
+
+    ESCmotor{
+        id:page4
+        visible: false
+    }
 }
+
+
+
+
+
+
+
+
 
 /*##^## Designer {
     D{i:0;autoSize:true;height:480;width:640}

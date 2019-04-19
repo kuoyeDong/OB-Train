@@ -185,7 +185,10 @@
     <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment.cpp" />
     <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment1.cpp" />
     <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment2.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment3.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\FaceExperiment4.cpp" />
     <ClCompile Include="experiment_src\FaceExperiment\fastmtcnn.cpp" />
+    <ClCompile Include="experiment_src\FaceExperiment\Image_to_BinaryData.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentFive.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentFour.cpp" />
     <ClCompile Include="experiment_src\PersonExperiment\ExperimentOne.cpp" />
@@ -287,6 +290,46 @@
     <None Include="MachineLearn\PersionExperiment\Person_Experiment_List.qml" />
     <None Include="MachineLearn\VisionExperiment.qml" />
     <None Include="module\blockly\media\1x1.gif" />
+    <None Include="Robot\BDCmotor.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\BDCmotor\BDCmotorInfoPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\BDCmotor\BDCmotorProjectDevelopPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Carmotor.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Carmotor\CarmotorInfoPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Carmotor\CarmotorProjectDevelopPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\MovingRobot.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Stepmotor.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Stepmotor\StepmotorInfoPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Stepmotor\StepmotorProjectDevelopPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Sensor\DroneSensor\BarometersGuide.qml" />
     <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage1.qml" />
     <None Include="VisionVoice\Detection\Introduction\KCFtracking\IntroductionPage2.qml" />
@@ -301,15 +344,27 @@
     <None Include="Drone\DronePage\APP.png" />
     <None Include="Drone\images\APP.png" />
     <None Include="Iot\images\APP.png" />
-    <None Include="Robot\images\APP.png" />
+    <None Include="Robot\images\APP.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\images\APP.png" />
     <None Include="Drone\APP.qml" />
     <None Include="Iot\APP.qml" />
-    <None Include="Robot\APP.qml" />
+    <None Include="Robot\APP.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\APP.qml" />
     <None Include="VisionVoice\images\AlphaGo.jpg" />
-    <None Include="Robot\images\Arm.png" />
-    <None Include="Robot\Arm.qml" />
+    <None Include="Robot\images\Arm.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\Arm.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Sensor\DroneSensor\images\Barometers.png" />
     <None Include="Sensor\DroneSensor\Barometers.qml" />
     <None Include="Iot\BasicNet.qml" />
@@ -324,9 +379,15 @@
     <None Include="Component\CharViewPage.qml" />
     <None Include="Component\CompassUi.qml" />
     <None Include="Iot\images\Connection.png" />
-    <None Include="Robot\images\Connection.png" />
+    <None Include="Robot\images\Connection.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Iot\Connection.qml" />
-    <None Include="Robot\Connection.qml" />
+    <None Include="Robot\Connection.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Drone\images\Cruiser.png" />
     <None Include="Drone\Cruiser.qml" />
     <None Include="Sensor\DroneSensor\UartData\DataBasicRecAndSendPage.qml" />
@@ -391,11 +452,17 @@
     <None Include="Sensor\RobotSensor\Infrared.qml" />
     <None Include="Drone\images\Interface.png" />
     <None Include="Iot\images\Interface.png" />
-    <None Include="Robot\images\Interface.png" />
+    <None Include="Robot\images\Interface.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\images\Interface.png" />
     <None Include="Drone\Interface.qml" />
     <None Include="Iot\Interface.qml" />
-    <None Include="Robot\Interface.qml" />
+    <None Include="Robot\Interface.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\Interface.qml" />
     <None Include="Sensor\images\Iot.png" />
     <None Include="Iot\IotPage.qml" />
@@ -419,11 +486,17 @@
     <None Include="Sensor\DroneSensor\MagPage\MagProjectDevelopPage.qml" />
     <None Include="Drone\images\Model.png" />
     <None Include="Iot\images\Model.png" />
-    <None Include="Robot\images\Model.png" />
+    <None Include="Robot\images\Model.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\images\Model.png" />
     <None Include="Drone\Model.qml" />
     <None Include="Iot\Model.qml" />
-    <None Include="Robot\Model.qml" />
+    <None Include="Robot\Model.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="VisionVoice\Model.qml" />
     <None Include="MachineLearn\images\ModelGenerate.png" />
     <None Include="Sensor\IotSensor\images\OBOX.png" />
@@ -449,10 +522,19 @@
     <None Include="Component\RFSetPage.qml" />
     <None Include="Sensor\RobotSensor\images\Radar.png" />
     <None Include="Sensor\RobotSensor\Radar.qml" />
-    <None Include="Robot\images\Robot.png" />
+    <None Include="Robot\images\Robot.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Sensor\images\Robot.png" />
-    <None Include="Robot\Robot.qml" />
-    <None Include="Robot\RobotPage.qml" />
+    <None Include="Robot\Robot.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Robot\RobotPage.qml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
     <None Include="Sensor\RobotSensor\RobotSensor.qml" />
     <None Include="module\blockly\accessible\libs\Rx.umd.min.js" />
     <None Include="Sensor\SensorPage.qml" />
@@ -786,6 +868,7 @@
     <None Include="module\blockly\core\scrollbar.js" />
     <None Include="module\blockly\msg\js\sd.js" />
     <None Include="module\blockly\msg\json\sd.json" />
+    <QtRcc Include="robot.qrc" />
     <QtRcc Include="sensor.qrc">
       <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sensor</InitFuncName>
       <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sensor</InitFuncName>
@@ -924,6 +1007,26 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="MachineLearn\images\folder.png" />
+    <Image Include="Robot\images\background.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Robot\images\BDCmotor.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Robot\images\BLDC.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Robot\images\stepmotor.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="Robot\images\stepmotor1.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
     <Image Include="Sensor\DroneSensor\images\BaroGuidePage.jpg" />
     <Image Include="VisionVoice\images\connection_1.png" />
     <Image Include="VisionVoice\images\connection_2.png" />

@@ -30,7 +30,7 @@ ApplicationWindow {
 
         onPressed:
         {
-            mySystemOpenReg.openFile("/Content_resource/磁力计模组/教学资料/教学PPT/磁力计模组PPT.ppt");
+            mySystemOpenReg.openFile("/Content_resource/magnetometer/material/ppt/magnetometer.ppt");
         }
 
     }
@@ -50,7 +50,7 @@ ApplicationWindow {
         font.pointSize: 20
 
             onPressed: {
-                mySystemOpenReg.openFile("/Content_resource/磁力计模组/教学资料/教学视频");
+                mySystemOpenReg.openFile("/Content_resource/magnetometer/material/video");
             }
     }
 
@@ -63,7 +63,7 @@ ApplicationWindow {
             font.pointSize: 20
 
                 onPressed: {
-                    mySystemOpenReg.openFile("/Content_resource/磁力计模组/教学资料/其他资料");
+                    mySystemOpenReg.openFile("/Content_resource/magnetometer/material/others");
                 }
         }
 

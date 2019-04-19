@@ -29,11 +29,12 @@ Page {
         }
 
         Button {
-            x: 313
-            y: 134
+            x: 305
+            y: 156
             width: 250
             height: 250
             text: qsTr("基础局部网")
+            display: "IconOnly"
 
             background: Image {
                 source: "images/LocalNet.png"
@@ -53,6 +54,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("基础全局网")
+            display: "IconOnly"
 
             background: Image {
                 source: "images/GoableNet.png"
@@ -72,6 +74,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("节点协作")
+            display: "IconOnly"
 
             background: Image {
                 source: "images/Connection.png"
@@ -91,6 +94,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("传感模组")
+            display: "IconOnly"
 
             background: Image {
                 source: "images/Model.png"
@@ -111,6 +115,7 @@ Page {
             height: 250
             text: qsTr("配件软硬接口")
             transformOrigin: Item.Center
+            display: "IconOnly"
 
             background: Image {
                 source: "images/Interface.png"
@@ -132,6 +137,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("APP实现")
+            display: "IconOnly"
 
             background: Image {
                 source: "images/APP.png"
@@ -142,6 +148,60 @@ Page {
                 page6.stack = stack;
                 stack.push(page6)
             }
+        }
+
+        Text {
+            id: element4
+            x: 1387
+            y: 788
+            text: qsTr("APP实现")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element5
+            x: 832
+            y: 788
+            text: qsTr("配件软硬接口")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element6
+            x: 358
+            y: 788
+            text: qsTr("传感模组")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element7
+            x: 1377
+            y: 397
+            text: qsTr("节点协作")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element8
+            x: 852
+            y: 397
+            text: qsTr("基础全局网")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element9
+            x: 330
+            y: 397
+            text: qsTr("基础局域网")
+            font.pixelSize: 40
+            font.bold: true
         }
 
     }

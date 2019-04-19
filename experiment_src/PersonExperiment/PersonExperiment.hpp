@@ -39,7 +39,7 @@ public:
 	Q_INVOKABLE void exp1Param(QString time, QString fps);
 	Q_INVOKABLE void exp2Param(int para);
 	Q_INVOKABLE void exp3Param(int para, int hog, int rgb, QString leaning_rate);
-	Q_INVOKABLE void exp4Param(int para, int hog, int rgb);
+	Q_INVOKABLE void exp4Param(int param, int hog, int rgb);
 	Q_INVOKABLE void exp5Param(int param, int hog, int rgb);
 	Q_INVOKABLE void reInit(int choice);
 

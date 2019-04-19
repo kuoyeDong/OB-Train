@@ -35,6 +35,7 @@ Page {
             if(true === myclassExposeByRegType.getserialOpenFlag()){
                 qmlToggleButton.toggleRight();
             }
+            myclassExposeByRegType.setCurrentPage(0);//清除页面设置
             stack.pop()
         }
     }
@@ -267,6 +268,7 @@ Page {
                 textEdit_read_ultrasonic_lowpassflilter.text = myclassExposeByRegType.getHeigth_Ultrasonic_lowpass();
                 textEdit_read_ultrasonic_noflilter.text = myclassExposeByRegType.getHeigth_Ultrasonic_nofliter();
                 textEdit_read_ultrasonic_time.text = myclassExposeByRegType.getHeigth_Ultrasonic_time();
+                textEdit_read_ultrasonic_lowpassflilter1.text = myclassExposeByRegType.getHeigth_Ultrasonic_alpha();
             }
 
         }
@@ -366,7 +368,7 @@ Page {
         enabled: true
 
         onPressed: {
-            mydataFresh.buttonSaveClick("\\Content_resource\\超声波模组\\数据保存\\", textArea.text);
+            mydataFresh.buttonSaveClick("\\Content_resource\\ultrasonic\\data\\", textArea.text);
             datasavecompletedw.show();
         }
     }
@@ -434,7 +436,7 @@ Page {
         font.pointSize: 22
         enabled: true
         onPressed: {
-            mydataFresh.buttonOpenFolderClick("\\Content_resource\\超声波模组\\数据保存\\");
+            mydataFresh.buttonOpenFolderClick("\\Content_resource\\ultrasonic\\data\\");
         }
     }
 
@@ -449,14 +451,14 @@ Page {
         anchors.horizontalCenterOffset: -613
         font.bold: true
         anchors.centerIn: parent
-        anchors.verticalCenterOffset: -165
+        anchors.verticalCenterOffset: -115
         font.pixelSize: 30
     }
 
     TextInput {
         id: textEdit_set_lowpass_confficent
         x: 626
-        y: 359
+        y: 409
         width: 71
         height: 38
         text: qsTr("0.9")
@@ -507,6 +509,31 @@ Page {
         width: 106
         height: 26
         text: qsTr("0")
+        font.bold: true
+        font.pixelSize: 30
+    }
+
+    Label {
+        id: label_set_lowpass_confficent1
+        x: -3
+        y: 11
+        width: 401
+        height: 32
+        text: qsTr("当前低通滤波系数:")
+        anchors.verticalCenterOffset: -165
+        font.bold: true
+        anchors.horizontalCenterOffset: -613
+        anchors.centerIn: parent
+        font.pixelSize: 30
+    }
+
+    Label {
+        id: textEdit_read_ultrasonic_lowpassflilter1
+        x: 608
+        y: 359
+        width: 106
+        height: 26
+        text: qsTr("0.9")
         font.bold: true
         font.pixelSize: 30
     }

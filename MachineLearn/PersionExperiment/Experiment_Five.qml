@@ -21,7 +21,10 @@ Page {
         anchors.left: parent.left
         anchors.top: parent.top
         onClicked: {
-            img_tracking.source="../images/src.png";
+            img_tracking.source = "../images/src.png";
+            feature_show.source = "../images/pro.png";
+            count.running = false;
+            ExpImage.setAppRunStatusClose();
             stack.pop();
         }
     }
@@ -41,22 +44,31 @@ Page {
 
     Image{
         id:img_tracking
-        x: 42
+        x: 43
         width:1260
         height:707
-        anchors.top: parent.top
-        anchors.topMargin: 187
-        anchors.left: camera_close.right
-        anchors.leftMargin: 81
+        anchors.top: setRect.bottom
+        anchors.topMargin: 25
         visible: true
         source:"../images/src.png";
         cache:false;
     }
 
+    Image {
+        id: feature_show
+        x: 1375
+        y: 293
+        width: 460
+        height: 460
+        visible: true
+        cache: false
+        source: "../images/pro.png"
+    }
+
     TextField {
         id: pathInput
         width: 176
-        height: 59
+        height: 54
         text: qsTr("")
         anchors.top: readpathtitle.bottom
         anchors.topMargin: 5
@@ -70,12 +82,12 @@ Page {
         width: 262
         height: 51
         text: qsTr("图像序列存储路径")
+        anchors.left: img_tracking.right
+        anchors.leftMargin: 20
+        anchors.top: setRect.top
+        anchors.topMargin: 0
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        anchors.left: img_tracking.right
-        anchors.leftMargin: 25
-        anchors.topMargin: 0
-        anchors.top: img_tracking.top
         font.pixelSize: 32
     }
 
@@ -117,7 +129,7 @@ Page {
             }
             else
             {
-                pathInput.text = openImgSaved.fileUrl
+                pathInput.text = fileUrl
                 if(gray.checkState == Qt.Checked)
                 {
                     ExpImage.exp5Param(0, 0, 0);
@@ -141,7 +153,7 @@ Page {
                     img_tracking.source = "";
                     img_tracking.source = ExpImage.get_tmp_path(0);
                 }
-            }
+           }
         }
     }
 
@@ -152,7 +164,7 @@ Page {
         height: 51
         text: qsTr("运算结果保存路径")
         verticalAlignment: Text.AlignVCenter
-        anchors.top: img_tracking.top
+        anchors.top: readpathtitle.top
         font.pixelSize: 32
         anchors.left: readpathtitle.right
         horizontalAlignment: Text.AlignHCenter
@@ -164,7 +176,7 @@ Page {
         id: pathOutput
         y: 244
         width: 176
-        height: 59
+        height: 55
         text: qsTr("")
         anchors.left: savepathtitle.left
         anchors.leftMargin: 0
@@ -209,54 +221,98 @@ Page {
     Button {
         id: firstframe
         x: 1404
-        y: 590
         width: 422
-        height: 78
+        height: 60
         text: qsTr("标定第一帧目标位置")
+        anchors.top: statusRect.bottom
+        anchors.topMargin: 6
+        anchors.horizontalCenterOffset: 0
         anchors.horizontalCenter: statusRect.horizontalCenter
-        anchors.bottom: start.top
-        anchors.bottomMargin: 35
         highlighted: true
         font.pointSize: 30
+
+        onClicked: {
+            ExpImage.setEx_id(5, 1);
+            ExpImage.expStart();
+            while(!ExpImage.appRunStatus()){}
+            ExpImage.setAppRunStatusClose();
+            if(!ExpImage.appConfigStatus())
+            {
+                statusText.text = qsTr("行人检测器初始化失败
+请手动设置目标框");
+            }
+            else
+            {
+                statusText.text = qsTr("检测到行人");
+                img_tracking.source = "";
+                img_tracking.source = ExpImage.get_tmp_path(0);
+            }
+        }
     }
 
     Button {
         id: start
-        y: 461
         width: 422
-        height: 78
+        height: 60
         text: qsTr("运行人形跟踪算法")
-        anchors.bottom: labelTarget.top
-        anchors.bottomMargin: 35
+        anchors.top: firstframe.bottom
+        anchors.topMargin: 5
         anchors.left: firstframe.left
         anchors.leftMargin: 0
         font.pointSize: 30
         highlighted: true
+
+        onClicked: {
+            if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
+            {
+                statusText.text = qsTr("请先设置参数
+并载入测试图像序列");
+            }
+            else
+            {
+                count.running=true;
+//                ExpImage.setEx_id(5, 4);
+//                ExpImage.expStart();
+//                img_tracking.source = "";
+//                img_tracking.source = ExpImage.get_tmp_path(0);
+            }
+        }
     }
 
-    Button {
-        id: labelTarget
-        y: 580
-        width: 422
-        height: 78
-        text: qsTr("标定剩余图像")
-        anchors.bottom: img_tracking.bottom
-        anchors.bottomMargin: 0
-        anchors.left: start.left
-        font.pointSize: 30
-        highlighted: true
-        anchors.leftMargin: 0
+    Timer{
+        id:count;
+        interval: 50;
+        running: false;
+        repeat: true
+        onTriggered: {
+            if(!ExpImage.appRunStatus())
+            {
+                statusText.text = qsTr("开始运行跟踪算法");
+                ExpImage.setEx_id(5, 4);
+                ExpImage.expStart();
+                img_tracking.source = "";
+                img_tracking.source = ExpImage.get_tmp_path(0);
+                feature_show.source = "";
+                feature_show.source = ExpImage.get_tmp_path(1);
+            }
+            else
+            {
+                img_tracking.source = "../images/src.png";
+                feature_show.source = "../images/pro.png";
+                statusText.text = qsTr("运行结束");
+                count.running = false;
+            }
+        }
     }
 
     Rectangle {
         id: statusRect
+        y: 762
         width: 557
-        height: 222
+        height: 108
         color: "#00000000"
-        anchors.top: pathInput.bottom
-        anchors.topMargin: 40
         anchors.left: pathInput.left
-        anchors.leftMargin: 0
+        anchors.leftMargin: 5
         border.width: 3
     }
 
@@ -264,10 +320,12 @@ Page {
     Label {
         id: statusText
         x: 1338
-        y: 362
+        y: 359
         width: 534
-        height: 188
+        height: 84
         text: qsTr("相关状态")
+        anchors.verticalCenter: statusRect.verticalCenter
+        anchors.horizontalCenterOffset: 0
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         anchors.horizontalCenter: statusRect.horizontalCenter
@@ -276,14 +334,13 @@ Page {
 
     Rectangle {
         id: setRect
+        y: 158
         width: 568
         height: 110
         color: "#00000000"
-        anchors.left: img_tracking.left
-        anchors.leftMargin: 0
-        anchors.top: img_tracking.bottom
+        anchors.left: paramSetTitle.right
+        anchors.leftMargin: 16
         border.width: 3
-        anchors.topMargin: 7
     }
 
     Button {
@@ -303,15 +360,8 @@ Page {
             ExpImage.expStart();
             while(!ExpImage.appRunStatus()){}
             ExpImage.setAppRunStatusClose();
-//            if(gray.checkState == Qt.Checked)
-//            {
-//                ExpImage.exp4Param(0, 0, 0);
-//            }
-//            else
-//            {
-//                ExpImage.exp4Param(0, 1, 1);
-//            }
-            status.text = qsTr("参数已重置")
+            statusText.text = qsTr("参数已重置
+请重新载入测试图像序列")
         }
     }
 
@@ -378,12 +428,12 @@ Page {
     Rectangle {
         id: rect_rectangle
         y: 901
-        width: 478
+        width: 274
         height: 110
         color: "#00000000"
         anchors.verticalCenterOffset: 0
         anchors.verticalCenter: setRect.verticalCenter
-        anchors.leftMargin: 15
+        anchors.leftMargin: 274
         border.width: 3
         anchors.left: setRect.right
 
@@ -405,7 +455,8 @@ Page {
             onClicked: {
                 if(gray.checkState != Qt.Checked && hog.checkState != Qt.Checked && rgb.checkState != Qt.Checked)
                 {
-                    statusText.text = qsTr("请先设置参数");
+                    statusText.text = qsTr("请先设置参数
+并载入测试图像序列");
                 }
                 else
                 {
@@ -420,8 +471,8 @@ Page {
                     ExpImage.setEx_id(5, 2);
                     ExpImage.expStart();
                     while(!ExpImage.appRunStatus()){}
-                    img.source = "";
-                    img.source = ExpImage.get_tmp_path(0);
+                    img_tracking.source = "";
+                    img_tracking.source = ExpImage.get_tmp_path(0);
                     ExpImage.setAppRunStatusClose();
                 }
             }
@@ -458,8 +509,8 @@ Page {
                     ExpImage.setEx_id(5, 2);
                     ExpImage.expStart();
                     while(!ExpImage.appRunStatus()){}
-                    img.source = "";
-                    img.source = ExpImage.get_tmp_path(0);
+                    img_tracking.source = "";
+                    img_tracking.source = ExpImage.get_tmp_path(0);
                     ExpImage.setAppRunStatusClose();
                 }
             }
@@ -497,8 +548,8 @@ Page {
                     ExpImage.setEx_id(5, 2);
                     ExpImage.expStart();
                     while(!ExpImage.appRunStatus()){}
-                    img.source = "";
-                    img.source = ExpImage.get_tmp_path(0);
+                    img_tracking.source = "";
+                    img_tracking.source = ExpImage.get_tmp_path(0);
                     ExpImage.setAppRunStatusClose();
                 }
             }
@@ -535,8 +586,8 @@ Page {
                     ExpImage.setEx_id(5, 2);
                     ExpImage.expStart();
                     while(!ExpImage.appRunStatus()){}
-                    img.source = "";
-                    img.source = ExpImage.get_tmp_path(0);
+                    img_tracking.source = "";
+                    img_tracking.source = ExpImage.get_tmp_path(0);
                     ExpImage.setAppRunStatusClose();
                 }
             }
@@ -573,12 +624,38 @@ Page {
                     ExpImage.setEx_id(5, 2);
                     ExpImage.expStart();
                     while(!ExpImage.appRunStatus()){}
-                    img.source = "";
-                    img.source = ExpImage.get_tmp_path(0);
+                    img_tracking.source = "";
+                    img_tracking.source = ExpImage.get_tmp_path(0);
                     ExpImage.setAppRunStatusClose();
                 }
             }
         }
+    }
+
+    Label {
+        id: paramSetTitle
+        x: 43
+        y: 158
+        width: 128
+        height: 112
+        text: qsTr("参数
+设置")
+        font.pointSize: 30
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
+    }
+
+    Label {
+        id: paramSetTitle2
+        x: 864
+        y: 158
+        width: 137
+        height: 112
+        text: qsTr("设置
+矩形框")
+        font.pointSize: 30
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
 }
 
@@ -710,11 +787,67 @@ Page {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*##^## Designer {
-    D{i:5;anchors_x:1352;anchors_y:244}D{i:6;anchors_x:1352;anchors_y:187}D{i:7;anchors_x:1370}
-D{i:10;anchors_x:1623;anchors_y:187}D{i:11;anchors_x:1352;anchors_y:244}D{i:12;anchors_x:1817}
-D{i:16;anchors_x:1396;anchors_y:461}D{i:17;anchors_x:1396;anchors_y:580}D{i:18;anchors_x:1396;anchors_y:580}
-D{i:19;anchors_width:557;anchors_x:1327;anchors_y:342}D{i:20;anchors_x:1396;anchors_y:917}
-D{i:21;anchors_x:516}D{i:25;anchors_x:639}
+    D{i:4;anchors_x:43}D{i:5;anchors_x:1352;anchors_y:244}D{i:6;anchors_x:1352;anchors_y:158}
+D{i:7;anchors_x:1370}D{i:10;anchors_x:1623;anchors_y:187}D{i:11;anchors_x:1352;anchors_y:244}
+D{i:12;anchors_x:1817}D{i:15;anchors_y:582}D{i:16;anchors_x:1396;anchors_y:461}D{i:17;anchors_x:1396;anchors_y:580}
+D{i:18;anchors_width:557;anchors_x:1327;anchors_y:342}D{i:19;anchors_x:43;anchors_y:917}
+D{i:20;anchors_x:516}D{i:24;anchors_x:639}
 }
  ##^##*/

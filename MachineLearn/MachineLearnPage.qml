@@ -34,10 +34,10 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("模型构建")
+            text: qsTr("")
 
             background: Image {
-                source: "images/ModelGenerate.png"
+                source: "images/vision.png"
             }
 
             onClicked: {
@@ -53,10 +53,10 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("数据训练集")
+            text: qsTr("")
 
             background: Image {
-                source: "images/DataTrain.png"
+                source: "images/NLP.png"
 
             }
 
@@ -73,7 +73,7 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("训练验证")
+            text: qsTr("")
 
             background: Image {
                 source: "images/TrainVerify.png"
@@ -84,6 +84,39 @@ Page {
                 page3.stack = stack;
                 stack.push(page3)
             }
+        }
+
+        Text {
+            id: element
+            x: 357
+            y: 396
+            width: 162
+            height: 43
+            text: qsTr("机器视觉")
+            font.bold: true
+            font.pixelSize: 40
+        }
+
+        Text {
+            id: element1
+            x: 839
+            y: 396
+            width: 243
+            height: 43
+            text: qsTr("自然语言处理")
+            font.bold: true
+            font.pixelSize: 40
+        }
+
+        Text {
+            id: element2
+            x: 1377
+            y: 397
+            width: 160
+            height: 42
+            text: qsTr("强化学习")
+            font.bold: true
+            font.pixelSize: 40
         }
 
 
@@ -110,3 +143,12 @@ Page {
 
 
 
+
+
+
+
+
+/*##^## Designer {
+    D{i:0;autoSize:true;height:480;width:640}
+}
+ ##^##*/

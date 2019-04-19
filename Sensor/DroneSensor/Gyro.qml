@@ -44,6 +44,7 @@ Page {
                 //                qmlToggleButton.color = "#CCCCCC";
 
             }
+            myclassExposeByRegType.setCurrentPage(0);//清除页面设置
             stack.pop()
         }
     }
@@ -290,7 +291,7 @@ Page {
         onPressed: {
             //fileDialog.open();
             //timer1.stop();
-            mydataFresh.buttonSaveClick("\\Content_resource\\IMU模组\\数据保存\\", textArea.text);
+            mydataFresh.buttonSaveClick("\\Content_resource\\gyroscope\\data\\", textArea.text);
             //timer1.start();
             datasavecompletedw.show();
         }
@@ -439,7 +440,7 @@ Page {
         font.pointSize: 22
         enabled: true
         onPressed: {
-            mydataFresh.buttonOpenFolderClick("\\Content_resource\\IMU模组\\数据保存\\");
+            mydataFresh.buttonOpenFolderClick("\\Content_resource\\gyroscope\\data\\");
         }
     }
 

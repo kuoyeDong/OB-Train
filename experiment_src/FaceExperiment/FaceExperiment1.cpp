@@ -58,3 +58,19 @@ void FaceExperiment::FaceDetbyMTCNN(cv::Mat frame, string savePath, int saveNum,
 	
 	
 }
+
+void FaceExperiment::saveNumFrame(cv::Mat frame)
+{
+	string saveFacePath = saveFramePath + "/" + to_string(saveFrameIntervalNum) + "_" + to_string(localnum + 1) + ".jpg";
+	cv::Mat frame_copy;
+	frame.copyTo(frame_copy);
+	cvtColor(frame_copy, frame_copy, COLOR_RGB2GRAY);
+	threshold(frame_copy, frame_copy, 70, 255, CV_THRESH_BINARY);
+	frame_copy = 255 - frame_copy;
+	resize(frame_copy, frame_copy, Size(28, 28));
+	if (localnum < saveFrameNum)
+		imwrite(saveFacePath, frame_copy);
+	localnum++;
+	if (localnum == saveFrameNum)
+		facedetFlag = false;
+}

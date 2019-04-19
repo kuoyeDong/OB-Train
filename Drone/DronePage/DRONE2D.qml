@@ -45,38 +45,38 @@ Item {
 
     Text {
         id: element2
-        x: 203
-        y: 367
-        text: qsTr("Y轴夹角：")
-        font.pixelSize: 25
+        x: 204
+        y: 365
+        text: qsTr("俯仰角：")
+        font.pixelSize: 30
     }
 
     Text {
         id: rolltext
-        x: 313
-        y: 367
+        x: 325
+        y: 366
         text: qsTr("0°")
-        font.pixelSize: 25
+        font.pixelSize: 30
     }
 
     Text {
         id: element
         x: 8
         y: 365
-        text: qsTr("X轴夹角：")
-        font.pixelSize: 25
+        text: qsTr("横滚角：")
+        font.pixelSize: 30
     }
 
     Text {
         id: pitchtext
-        x: 118
+        x: 129
         y: 366
         text: qsTr("0°")
-        font.pixelSize: 25
+        font.pixelSize: 30
     }
 
     Timer{
-        interval: 100
+        interval: 200
         repeat: true
         triggeredOnStart: false
         running: true
@@ -92,7 +92,7 @@ Item {
                 imu2dimage.x = 175 - myclassExposeByRegType.getOffsetX_Acc();
                 imu2dimage.y = 175 + myclassExposeByRegType.getOffsetY_Acc();
                 pitchtext.text = myclassExposeByRegType.getAccAngleX();
-                rolltext.text = myclassExposeByRegType.getAccAngleY();
+                rolltext.text = -myclassExposeByRegType.getAccAngleY();
             }
 
         }

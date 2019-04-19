@@ -210,7 +210,7 @@ cv::Rect KCFTracker::update(cv::Mat image)
 	//if (scale == 0 || scale == 1)
 	if (true)
 	{
-		float peak_value;
+		//float peak_value;
 		cv::Point2f res = detect(_tmpl, getFeatures(imgTmp, 0, 1.0f), peak_value);
 
 		if (scale_step != 1) {
@@ -345,7 +345,7 @@ cv::Point2f KCFTracker::detect(cv::Mat z, cv::Mat x, float &peak_value)
 	cv::Mat fftdTmp = fftd(k);
 	cv::Mat calRes = complexMultiplication(_alphaf, fftdTmp);
 	fftdTmp = fftd(calRes, true);
-    cv::Mat res = real(fftdTmp);
+	Res = real(fftdTmp);
 
 	//cv::imshow("res", res);
 	//cv::Mat res_show;
@@ -356,16 +356,16 @@ cv::Point2f KCFTracker::detect(cv::Mat z, cv::Mat x, float &peak_value)
     //minMaxLoc only accepts doubles for the peak, and integer points for the coordinates
     cv::Point2i pi, vi;
     double pv, vv;
-    cv::minMaxLoc(res, &vv, &pv, &vi, &pi);
+    cv::minMaxLoc(Res, &vv, &pv, &vi, &pi);
     peak_value = (float) pv;
 	float valley_value = (float) vv;
 	/****************************Modify*****************************/
-	cv::Mat minValMap(res.rows, res.cols, CV_32FC1, valley_value);
+	cv::Mat minValMap(Res.rows, Res.cols, CV_32FC1, valley_value);
 	cv::Mat tmp;
-	pow((res - minValMap), 2, tmp);
+	pow((Res - minValMap), 2, tmp);
 	cv::Scalar sum_value = cv::sum(tmp);
 
-	float APCE = ((pv - vv) * (pv - vv)) / ((double)sum_value[0] / (res.rows * res.cols));
+	float APCE = ((pv - vv) * (pv - vv)) / ((double)sum_value[0] / (Res.rows * Res.cols));
 	if (meanAPCE == 0)
 		meanAPCE = APCE;
 	/****************************Modify*****************************/
@@ -373,16 +373,16 @@ cv::Point2f KCFTracker::detect(cv::Mat z, cv::Mat x, float &peak_value)
     //subpixel peak estimation, coordinates will be non-integer
     cv::Point2f p((float)pi.x, (float)pi.y);
 
-    if (pi.x > 0 && pi.x < res.cols-1) {
-        p.x += subPixelPeak(res.at<float>(pi.y, pi.x-1), peak_value, res.at<float>(pi.y, pi.x+1));
+    if (pi.x > 0 && pi.x < Res.cols-1) {
+        p.x += subPixelPeak(Res.at<float>(pi.y, pi.x-1), peak_value, Res.at<float>(pi.y, pi.x+1));
     }
 
-    if (pi.y > 0 && pi.y < res.rows-1) {
-        p.y += subPixelPeak(res.at<float>(pi.y-1, pi.x), peak_value, res.at<float>(pi.y+1, pi.x));
+    if (pi.y > 0 && pi.y < Res.rows-1) {
+        p.y += subPixelPeak(Res.at<float>(pi.y-1, pi.x), peak_value, Res.at<float>(pi.y+1, pi.x));
     }
 
-    p.x -= (res.cols) / 2;
-    p.y -= (res.rows) / 2;
+    p.x -= (Res.cols) / 2;
+    p.y -= (Res.rows) / 2;
 
     return p;
 }

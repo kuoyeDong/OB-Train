@@ -288,7 +288,7 @@ Page {
          font.pointSize: 20
 
          onClicked: {
-             system_open_visual_program.openFile("/Content_resource/Posture/教学资料/教学视频/Posture.MOV");
+             system_open_visual_program.openFile("/Content_resource/Posture/video/Posture.MOV");
          }
      }
 

@@ -142,6 +142,8 @@ public:
     cv::Mat _tmpl;
     cv::Mat _labCentroids;
 	cv::Rect_<float> _roi;
+	cv::Mat Res;
+	float peak_value;
 
 public:
     int size_patch[3];

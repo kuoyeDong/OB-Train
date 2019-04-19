@@ -7,7 +7,6 @@
         <file>MachineLearn/MachineLearnPage.qml</file>
         <file>MachineLearn/TrainVerify.qml</file>
         <file>MachineLearn/images/PersonControl.png</file>
-        <file>MachineLearn/images/FaceUnlock.png</file>
         <file>MachineLearn/VisionExperiment.qml</file>
         <file>MachineLearn/PersionExperiment/Person_Experiment_List.qml</file>
         <file>MachineLearn/PersionExperiment/Experiment_One.qml</file>
@@ -33,8 +32,12 @@
         <file>MachineLearn/FaceExperiment/FaceExp2.qml</file>
         <file>MachineLearn/FaceExperiment/FaceExp3.qml</file>
         <file>MachineLearn/FaceExperiment/FaceExp4.qml</file>
-        <file>MachineLearn/FaceExperiment/FaceExp5.qml</file>
         <file>MachineLearn/images/function.png</file>
         <file>MachineLearn/images/humanModel.png</file>
+        <file>MachineLearn/images/FaceUnlock1.png</file>
+        <file>MachineLearn/images/FaceUnlock.jpg</file>
+        <file>MachineLearn/images/FaceUnlock.png</file>
+        <file>MachineLearn/images/NLP.png</file>
+        <file>MachineLearn/images/vision.png</file>
     </qresource>
 </RCC>

@@ -27,7 +27,7 @@ Page {
         x: 719
         width: 408
         height: 56
-        text: qsTr("人脸识别相关实验")
+        text: qsTr("手写数字识别相关实验")
         anchors.horizontalCenterOffset: 0
         anchors.top: parent.top
         anchors.topMargin: 76
@@ -40,7 +40,7 @@ Page {
         x: 440
         width: 1156
         height: 80
-        text: qsTr("实验一  使用图传模组采集人脸图像数据实验")
+        text: qsTr("实验一  使用图传模组采集图像数据实验")
         highlighted: true
         autoRepeat: false
         flat: false
@@ -62,7 +62,7 @@ Page {
         x: 440
         width: 1156
         height: 80
-        text: qsTr("实验二  获取网络模型不同层的的输出特征实验")
+        text: qsTr("实验二  卷积神经网络（CNN）与特征提取")
         highlighted: true
         anchors.top: ex1.bottom
         anchors.topMargin: 60
@@ -82,7 +82,7 @@ Page {
         x: 440
         width: 1156
         height: 80
-        text: qsTr("实验三  人脸识别模型训练实验")
+        text: qsTr("实验三  手写数字识别模型训练实验")
         flat: false
         highlighted: true
         anchors.top: ex2.bottom
@@ -103,7 +103,7 @@ Page {
         x: 382
         width: 1156
         height: 80
-        text: qsTr("实验四  人脸识别网络模型验证实验")
+        text: qsTr("实验四  手写数字识别模型验证实验")
         highlighted: true
         anchors.top: ex3.bottom
         anchors.topMargin: 60
@@ -118,25 +118,25 @@ Page {
         }
     }
 
-    Button {
-        id: ex5
-        x: 382
-        width: 1156
-        height: 80
-        text: qsTr("实验五  人脸模型应用实验")
-        highlighted: true
-        anchors.top: ex4.bottom
-        anchors.topMargin: 60
-        anchors.horizontalCenterOffset: 0
-        anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: 35
+//    Button {
+//        id: ex5
+//        x: 382
+//        width: 1156
+//        height: 80
+//        text: qsTr("实验五  人脸模型应用实验")
+//        highlighted: true
+//        anchors.top: ex4.bottom
+//        anchors.topMargin: 60
+//        anchors.horizontalCenterOffset: 0
+//        anchors.horizontalCenter: parent.horizontalCenter
+//        font.pointSize: 35
 
-        onClicked: {
-            ex_page_5.visible = true;
-            ex_page_5.stack = stack;
-            stack.push(ex_page_5)
-        }
-    }
+//        onClicked: {
+//            ex_page_5.visible = true;
+//            ex_page_5.stack = stack;
+//            stack.push(ex_page_5)
+//        }
+//    }
 
 
 
@@ -160,10 +160,10 @@ Page {
         visible: false
     }
 
-    FaceExp5{
-        id:ex_page_5
-        visible: false
-    }
+//    FaceExp5{
+//        id:ex_page_5
+//        visible: false
+//    }
 
 
 }

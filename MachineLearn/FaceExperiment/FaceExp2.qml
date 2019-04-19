@@ -67,7 +67,8 @@ Page {
         onNewViewRequested: request.openIn(webView)
     }
 
-    Rectangle {
+    Rectangle
+    {
         id: rectangle
         x: 1392
         y: 180
@@ -88,7 +89,8 @@ Page {
         }
     }
 
-    Rectangle {
+    Rectangle
+    {
         id: rectangle1
         x: 1652
         y: 180
@@ -181,7 +183,7 @@ Page {
         y: 440
         width: 340
         height: 60
-        text: qsTr("请选择一张人脸图像")
+        text: qsTr("请选择一张图像")
         leftPadding: 10
         padding: 5
         font.weight: Font.Light

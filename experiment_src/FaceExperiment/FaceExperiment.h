@@ -8,20 +8,31 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <QDebug>
 #include <io.h>
 
+#include <QDebug>
+#include <QObject>
+
+//#include <Python.h>
+//#include <numpy/arrayobject.h>
 
 #include "../src/camera.hpp"
 #include "../src/ZhSupport.h"
 #include"../src/imageprovider.h"
 
-#include <QObject>
+
 #include <opencv.hpp>
+#include <opencv2/opencv.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include "opencv2/imgcodecs.hpp"
+#include <opencv2/highgui.hpp>
+#include <opencv2/ml.hpp>
+
 
 using namespace cv;
 using namespace std;
-
+using namespace cv::ml;
 
 
 class FaceExperiment : public QObject
@@ -73,6 +84,17 @@ private:
 public:
 	Q_INVOKABLE void getParamsForFaceExp1(QString video_path, QString num1, QString num2);
 	Q_INVOKABLE void getParamsForFaceExp2(QString video_path, QString num1, QString num2, QString num3, QString kernName1, QString kernName2, QString kernName3);
+	Q_INVOKABLE void getParamsForFaceExp3(QString input_datapath, QString input_labelpath, QString output_path, QString kernName, QString num_c, QString num_gamma, QString iter_num);
+	Q_INVOKABLE void getParamsForFaceExp4(QString input_datapath, QString output_path);
+	Q_INVOKABLE void getParamsForFaceExp4_1(QString input_datapath, QString input_labelpath, QString model_path);
+	Q_INVOKABLE void getParamsForFaceExp4_2(QString model_path);
+	Q_INVOKABLE void trainMNIST();
+	Q_INVOKABLE void testMNIST();
+	Q_INVOKABLE void testInputNum();
+	Q_INVOKABLE void runConvertTrainData();
+	Q_INVOKABLE void runConvertTestData();
+	Q_INVOKABLE QString getContent();
+	Q_INVOKABLE QString getContentResponse();
 
 
 
@@ -80,8 +102,12 @@ public:
 public:
 	//实验一功能代码
 	void FaceDetbyMTCNN(cv::Mat frame, string savePath, int saveNum, int intervalNum);
+	void saveNumFrame(cv::Mat frame);
 	//实验二功能代码
 	Mat kernelTest();//int n1, int n2, int n3, string kern1, string kern2, string kern3);
+	//实验三功能代码
+	int reverseInt(int i);
+	
 
 
 private:
@@ -96,6 +122,19 @@ private:
 	string srcImgPath;
 	Mat dstImg;
 	string kernel1, kernel2, kernel3;
+
+	//实验三参数
+	int iterNum;
+	float numC, numGamma;
+	string kernelName;
+	string inputDataPath, inputLabelPath, outputPath;
+	string inputTrainDataPath, outputTrainDataPath;
+
+	//实验四参数
+	string inputTestDataPath, inputTestLabelPath, inputModelPath;
+	double preAccuracy;
+	int response;
+
 
 
 private:

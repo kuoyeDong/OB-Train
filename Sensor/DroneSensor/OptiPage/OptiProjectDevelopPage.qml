@@ -31,7 +31,7 @@ ApplicationWindow {
 
         onClicked:
         {
-            mySystemOpenReg.openFile("/Content_resource/光流模组/Demo_Project/Drone_Templates/Projects/Project.uvprojx");
+            mySystemOpenReg.openFile("/Content_resource/opticflow/Demo_Project/Drone_Templates/Projects/Project.uvprojx");
         }
 
     }
@@ -50,7 +50,7 @@ ApplicationWindow {
         font.bold: true
         font.pointSize: 20
         onPressed: {
-            mySystemOpenReg.openFile("/Content_resource/光流模组/教学资料/教学视频/开发操作视频.mp4");
+            mySystemOpenReg.openFile("/Content_resource/opticflow/material/video/download.mp4");
         }
     }
 

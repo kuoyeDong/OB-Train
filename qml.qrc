@@ -14,19 +14,6 @@
         <file>Iot/images/Interface.png</file>
         <file>Iot/images/LocalNet.png</file>
         <file>Iot/images/Model.png</file>
-        <file>Robot/APP.qml</file>
-        <file>Robot/Arm.qml</file>
-        <file>Robot/Connection.qml</file>
-        <file>Robot/Interface.qml</file>
-        <file>Robot/Model.qml</file>
-        <file>Robot/Robot.qml</file>
-        <file>Robot/RobotPage.qml</file>
-        <file>Robot/images/APP.png</file>
-        <file>Robot/images/Arm.png</file>
-        <file>Robot/images/Connection.png</file>
-        <file>Robot/images/Interface.png</file>
-        <file>Robot/images/Model.png</file>
-        <file>Robot/images/Robot.png</file>
         <file>Component/QmlToggleButton.qml</file>
         <file>Component/SwipeViewPage.qml</file>
         <file>Component/VideoPlayer.qml</file>
@@ -36,17 +23,12 @@
         <file>Component/CompassUi.qml</file>
         <file>Component/CharViewPage.qml</file>
         <file>Component/compass.svg</file>
-        <file>images/cameraConnect.png</file>
         <file>Component/arrow.png</file>
         <file>Component/plane2d.png</file>
         <file>Component/qipao.png</file>
         <file>Component/timg.png</file>
         <file>SerialPortRefresh.js</file>
         <file>main.qml</file>
-        <file>images/background3.png</file>
-        <file>images/dog.jpg</file>
-        <file>images/still.jpg</file>
-        <file>images/still.png</file>
         <file>Component/FaceRegisterPage.qml</file>
         <file>Component/FaceChangePage.qml</file>
 	<file>Component/refresh.png</file>

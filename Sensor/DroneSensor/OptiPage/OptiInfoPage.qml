@@ -30,7 +30,7 @@ ApplicationWindow {
 
         onClicked:
         {
-            mySystemOpenReg.openFile("/Content_resource/光流模组/教学资料/教学PPT/光流模组PPT.ppt");
+            mySystemOpenReg.openFile("/Content_resource/opticflow/material/ppt/opticflow.ppt");
         }
     }
 
@@ -48,7 +48,7 @@ ApplicationWindow {
         font.bold: true
         font.pointSize: 20
         onPressed: {
-            mySystemOpenReg.openFile("/Content_resource/光流模组/教学资料/教学视频");
+            mySystemOpenReg.openFile("/Content_resource/opticflow/material/video");
         }
 
     }
@@ -62,7 +62,7 @@ ApplicationWindow {
             font.pointSize: 20
 
             onPressed: {
-                mySystemOpenReg.openFile("/Content_resource/光流模组/教学资料/其他资料");
+                mySystemOpenReg.openFile("/Content_resource/opticflow/material/others");
             }
         }
 

@@ -37,7 +37,7 @@ Page {
         x: 719
         width: 948
         height: 56
-        text: qsTr("实验一  使用图传模组采集人脸图像数据实验")
+        text: qsTr("实验一  使用图传模组采集图像数据实验")
         anchors.horizontalCenterOffset: 0
         anchors.top: parent.top
         anchors.topMargin: 82
@@ -148,7 +148,7 @@ Page {
             }
             else
             {
-                recordpath.text = qsTr("开始采集人脸图像")
+                recordpath.text = qsTr("开始采集图像")
                 playicon.source = "../images/play.png"
             }
         }
@@ -213,8 +213,8 @@ Page {
         id: recordpath
         x: 49
         width: 211
-        text: qsTr("开始采集人脸图像")
-        anchors.horizontalCenterOffset: -37
+        text: qsTr("开始采集图像")
+        anchors.horizontalCenterOffset: 1
         anchors.bottom: img_tracking.bottom
         anchors.bottomMargin: -30
         anchors.top: record.bottom
@@ -237,7 +237,7 @@ Page {
 
     ComboBox {
         id: duration
-        width: 90
+        width: 112
         height: 68
         anchors.verticalCenter: second.verticalCenter
         font.pointSize: 25
@@ -246,7 +246,7 @@ Page {
         anchors.left: camera_close.left
         anchors.leftMargin: 0
 
-        model: ["30", "40", "50", "60"]
+        model: ["100", "200", "300", "400"]
     }
 
     Label {
@@ -256,7 +256,7 @@ Page {
         width: 46
         height: 42
         text: qsTr("帧")
-        anchors.leftMargin: 54
+        anchors.leftMargin: 32
         anchors.topMargin: 54
         anchors.top: camera_connect.bottom
         font.pixelSize: 40
@@ -267,7 +267,7 @@ Page {
         id: cbtitle2
         width: 190
         height: 42
-        text: qsTr("采集间隔：")
+        text: qsTr("采集数字：")
         anchors.leftMargin: 0
         anchors.topMargin: 80
         anchors.top: cbtitle.bottom
@@ -279,13 +279,13 @@ Page {
         id: interval
         x: 304
         y: 460
-        width: 90
-        height: 60
+        width: 112
+        height: 66
         anchors.verticalCenter: fpstitle.verticalCenter
         font.pointSize: 25
         anchors.leftMargin: 0
         anchors.topMargin: 55
-        model: ["1", "2", "3", "4", "5"]
+        model: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         anchors.top: duration.bottom
         anchors.left: duration.left
     }
@@ -294,9 +294,9 @@ Page {
         id: fpstitle
         x: 448
         y: 479
-        width: 60
+        width: 46
         height: 42
-        text: qsTr("帧")
+        text: qsTr("")
         anchors.leftMargin: 40
         anchors.topMargin: 80
         anchors.top: second.bottom
@@ -341,6 +341,10 @@ Page {
     }
 
 }
+
+
+
+
 
 
 

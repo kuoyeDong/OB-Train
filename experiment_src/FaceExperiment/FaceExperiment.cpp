@@ -61,6 +61,7 @@ void FaceExperiment::camera_close()
 	cameraStatus = 0;
 
 	facedetFlag = false;
+	frame_face.release();
 }
 
 bool FaceExperiment::isOpened()
@@ -123,7 +124,8 @@ void FaceExperiment::setImage()
 		//สตั้าป
 		if (!frame_face.empty() && facedetFlag)
 		{
-			FaceDetbyMTCNN(frame_face, saveFramePath, saveFrameNum, saveFrameIntervalNum);
+			//FaceDetbyMTCNN(frame_face, saveFramePath, saveFrameNum, saveFrameIntervalNum);
+			saveNumFrame(frame_face);
 			m_pImgProvider->img = MattoQImage(frame_face);
 		}
 
@@ -165,6 +167,67 @@ void FaceExperiment::getParamsForFaceExp2(QString video_path, QString num1, QStr
 	kernel2 = kernName2.toStdString();
 	kernel3 = kernName3.toStdString();
 
+}
+
+void FaceExperiment::getParamsForFaceExp3(QString input_datapath, QString input_labelpath, QString output_path, QString kernName, QString num_c, QString num_gamma, QString iter_num)
+{
+	QByteArray path1 = input_datapath.toLocal8Bit();
+	std::string input_datapath_tmp = std::string(path1);
+	stringReplace(input_datapath_tmp, "\\", "/");
+	inputDataPath = input_datapath_tmp.substr(8, input_datapath_tmp.size() - 1);
+
+	QByteArray path2 = input_labelpath.toLocal8Bit();
+	std::string input_labelpath_tmp = std::string(path2);
+	stringReplace(input_labelpath_tmp, "\\", "/");
+	inputLabelPath = input_labelpath_tmp.substr(8, input_labelpath_tmp.size() - 1);
+
+	QByteArray path3 = output_path.toLocal8Bit();
+	std::string output_path_tmp = std::string(path3);
+	stringReplace(output_path_tmp, "\\", "/");
+	outputPath = output_path_tmp.substr(8, output_path_tmp.size() - 1);
+
+	kernelName = kernName.toStdString();
+	numC = num_c.toDouble();
+	numGamma = num_gamma.toDouble();
+	iterNum = iter_num.toInt();
+}
+void FaceExperiment::getParamsForFaceExp4(QString input_datapath, QString output_path)
+{
+	QByteArray path1 = input_datapath.toLocal8Bit();
+	std::string input_traindatapath_tmp = std::string(path1);
+	stringReplace(input_traindatapath_tmp, "\\", "/");
+	inputTrainDataPath = input_traindatapath_tmp.substr(8, input_traindatapath_tmp.size() - 1);
+
+	QByteArray path2 = output_path.toLocal8Bit();
+	std::string output_traindatapath_tmp = std::string(path2);
+	stringReplace(output_traindatapath_tmp, "\\", "/");
+	outputTrainDataPath = output_traindatapath_tmp.substr(8, output_traindatapath_tmp.size() - 1);
+}
+
+void FaceExperiment::getParamsForFaceExp4_1(QString input_datapath, QString input_labelpath, QString model_path)
+{
+	QByteArray path1 = input_datapath.toLocal8Bit();
+	std::string input_traindatapath_tmp = std::string(path1);
+	stringReplace(input_traindatapath_tmp, "\\", "/");
+	inputTestDataPath = input_traindatapath_tmp.substr(8, input_traindatapath_tmp.size() - 1);
+
+	QByteArray path2 = input_labelpath.toLocal8Bit();
+	std::string input_labelpath_tmp = std::string(path2);
+	stringReplace(input_labelpath_tmp, "\\", "/");
+	inputTestLabelPath = input_labelpath_tmp.substr(8, input_labelpath_tmp.size() - 1);
+
+	QByteArray path3 = model_path.toLocal8Bit();
+	std::string model_path_tmp = std::string(path3);
+	stringReplace(model_path_tmp, "\\", "/");
+	inputModelPath = model_path_tmp.substr(8, model_path_tmp.size() - 1);
+}
+
+void FaceExperiment::getParamsForFaceExp4_2(QString model_path)
+{
+	QByteArray path = model_path.toLocal8Bit();
+	std::string model_path_tmp = std::string(path);
+	stringReplace(model_path_tmp, "\\", "/");
+	inputModelPath = model_path_tmp.substr(8, model_path_tmp.size() - 1);
 }
 
 void FaceExperiment::stringReplace(std::string &strsrc, const std::string &strtarget, const std::string &strdst)

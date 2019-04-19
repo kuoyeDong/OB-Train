@@ -35,7 +35,7 @@ ApplicationWindow {
 
         onPressed:
         {
-            mySystemOpenReg.openFile("/Content_resource/超声波模组/教学资料/教学PPT/超声波模组PPT.ppt");
+            mySystemOpenReg.openFile("/Content_resource/ultrasonic/material/ppt/ultrasonic.ppt");
 
         }
     }
@@ -49,7 +49,7 @@ ApplicationWindow {
         font.bold: true
         font.pointSize: 20
         onPressed: {
-                mySystemOpenReg.openFile("/Content_resource/超声波模组/教学资料/教学视频");
+                mySystemOpenReg.openFile("/Content_resource/ultrasonic/material/video");
             }
     }
 
@@ -61,7 +61,7 @@ ApplicationWindow {
             font.bold: true
             font.pointSize: 20
                 onPressed: {
-                    mySystemOpenReg.openFile("/Content_resource/超声波模组/教学资料/其他资料");
+                    mySystemOpenReg.openFile("/Content_resource/ultrasonic/material/others");
                 }
         }
 

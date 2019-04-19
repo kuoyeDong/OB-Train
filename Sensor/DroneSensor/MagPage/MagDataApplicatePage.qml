@@ -64,7 +64,7 @@ Item {
         onPressed: {
             //fileDialog.open();
             //timer1.stop();
-            mydataFresh.buttonSaveClick("\\Content_resource\\电子罗盘模组\\数据保存\\", textArea.text);
+            mydataFresh.buttonSaveClick("\\Content_resource\\电子罗盘模组\\data\\", textArea.text);
             //timer1.start();
             datasavecompletedw.show();
         }
@@ -140,7 +140,7 @@ Item {
         font.pointSize: 22
         enabled: true
         onPressed: {
-            mydataFresh.buttonOpenFolderClick("\\Content_resource\\电子罗盘模组\\数据保存\\");
+            mydataFresh.buttonOpenFolderClick("\\Content_resource\\电子罗盘模组\\data\\");
         }
     }
 

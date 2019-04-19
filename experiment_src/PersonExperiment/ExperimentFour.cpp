@@ -204,7 +204,7 @@ string TestModel(bool hog, bool rgb)
 			writeMatToFile(res, data_save_file.c_str(), action, false);
 		}
 
-		string savepath = GetProgramDir() + "/" + "odify_pro_img.jpg";
+		string savepath = GetProgramDir() + "/" + "modify_pro_img.jpg";
 		imwrite(savepath, show);
 		string path = "file:///" + savepath;
 		return path;

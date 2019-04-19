@@ -33,7 +33,8 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("人脸识别")
+            text: qsTr("人脸解锁")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/FaceUnlock.png"
@@ -43,6 +44,7 @@ Page {
                 page1.visible = true;
                 page1.stack = stack;
                 stack.push(page1)
+                myclassExposeByRegType.setCurrentPage(8);//打开人脸识别界面
             }
         }
 
@@ -52,7 +54,8 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("视觉跟踪")
+            text: qsTr("姿态人型控制")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/PersonControl.png"
@@ -64,6 +67,7 @@ Page {
                 page2.visible = true;
                 page2.stack = stack;
                 stack.push(page2)
+                myclassExposeByRegType.setCurrentPage(9);//打开人形跟随界面
             }
         }
 
@@ -73,7 +77,8 @@ Page {
             y: 134
             width: 250
             height: 250
-            text: qsTr("姿态识别")
+            text: qsTr("语音识别播放")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/posture_logo.png"
@@ -83,6 +88,7 @@ Page {
                 page3.visible = true;
                 page3.stack = stack;
                 stack.push(page3)
+                myclassExposeByRegType.setCurrentPage(10);//打开姿态识别界面
             }
         }
 
@@ -93,6 +99,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("传感模组")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/Model.png"
@@ -113,6 +120,7 @@ Page {
             height: 250
             text: qsTr("配件软硬接口")
             transformOrigin: Item.Center
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/Interface.png"
@@ -134,6 +142,7 @@ Page {
             width: 250
             height: 250
             text: qsTr("APP实现")
+            display: AbstractButton.IconOnly
 
             background: Image {
                 source: "images/APP.png"
@@ -145,6 +154,61 @@ Page {
                 stack.push(page6)
             }
         }
+
+        Text {
+            id: element
+            x: 358
+            y: 788
+            text: qsTr("传感模组")
+            font.bold: true
+            font.pixelSize: 40
+        }
+
+        Text {
+            id: element1
+            x: 358
+            y: 390
+            text: qsTr("人脸解锁")
+            font.bold: true
+            font.pixelSize: 40
+        }
+
+        Text {
+            id: element2
+            x: 880
+            y: 390
+            text: qsTr("人形跟随")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element3
+            x: 840
+            y: 788
+            text: qsTr("配件软硬接口")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element4
+            x: 1387
+            y: 788
+            text: qsTr("APP实现")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
+        Text {
+            id: element5
+            x: 1377
+            y: 390
+            text: qsTr("姿态识别")
+            font.pixelSize: 40
+            font.bold: true
+        }
+
 
     }
 
@@ -183,6 +247,10 @@ Page {
         visible: false
     }
 }
+
+
+
+
 
 
 
