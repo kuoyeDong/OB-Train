@@ -27,7 +27,11 @@
 
 
 
-
+/**
+ * 转换十进制数为十六进制字符
+ * @param {any} num 十进制数
+ * @param {any} len 目标字节长度
+ */
 function transHex(num, len) {
     num = num * 1;
     let max = Math.pow(256, len) - 1;
