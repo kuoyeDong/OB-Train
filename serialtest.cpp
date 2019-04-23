@@ -94,7 +94,7 @@ static int flag_currentPage = 0;//标识符，指示当前页面序号
 //12: 轴臂电机
 //13: 直流有刷电机
 //14: 无刷电调/机器车电机
-
+//15: 演示页面
 
 SerialTest::SerialTest(QSerialPort *parent):
     QSerialPort (parent),
@@ -1212,6 +1212,80 @@ void SerialTest::receivefrom()//由readyRead()消息出发（在前边进行绑�
                                     getESC_Hall() + " " );
 
         }
+
+        else if(receivedata.mid(28,2) == "0f")
+        {
+            //接收演示
+            int u16half = 1 << 15;
+            int u16 = 1 << 16;
+            ACCX = receivedata.mid(4,4).toInt(&ok, 16);
+            if(ACCX >= u16half){
+                ACCX -= u16;
+            }
+            ACCY = receivedata.mid(8,4).toInt(&ok, 16);
+            if(ACCY >= u16half){
+                ACCY -= u16;
+            }
+            ACCZ = receivedata.mid(12,4).toInt(&ok, 16);
+            if(ACCZ >= u16half){
+                ACCZ -= u16;
+            }
+
+            float temp;
+            temp=atan((double)ACCX/sqrtf(ACCY*ACCY+ACCZ*ACCZ))*180/3.1415926;
+            temp-=Angle_Acc_X;
+            if(temp>0.2||temp<-0.2)
+            {
+                Angle_Acc_X+=temp;
+            }
+            temp=atan((double)ACCY/sqrtf(ACCX*ACCX+ACCZ*ACCZ))*180/3.1415926;
+            temp-=Angle_Acc_Y;
+            if(temp>0.2||temp<-0.2)
+            {
+
+                Angle_Acc_Y+=temp;
+            }
+
+            mag_x = (receivedata.mid(16,4).toInt(&ok, 16));
+            if(mag_x >= 32768){
+                mag_x -= 65536;
+            }
+            mag_y = (receivedata.mid(20,4).toInt(&ok, 16));
+            if(mag_y >= 32768){
+                mag_y -= 65536;
+            }
+            mag_z = (receivedata.mid(24,4).toInt(&ok, 16));
+            if(mag_z >= 32768){
+                mag_z -= 65536;
+            }
+
+            qint64 corner = (receivedata.mid(30,4).toInt(&ok, 16))/10;
+            if(ok && corner != mag_corner){
+                mag_corner = corner;
+                if(mag_corner <= 21 || mag_corner >= 338 ){
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe5\x8c\x97");
+                }else if (mag_corner >= 22 && mag_corner <= 66) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe4\xb8\x9c\xe5\x8c\x97");
+                }else if (mag_corner >= 67 && mag_corner <= 112) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe4\xb8\x9c");
+                }else if (mag_corner >= 113 && mag_corner <= 156) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe4\xb8\x9c\xe5\x8d\x97");
+                }else if (mag_corner >= 157 && mag_corner <= 201) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe5\x8d\x97");
+                }else if (mag_corner >= 202 && mag_corner <= 247) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe8\xa5\xbf\xe5\x8d\x97");
+                }else if (mag_corner >= 248 && mag_corner <= 291) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe8\xa5\xbf");
+                }else if (mag_corner >= 292 && mag_corner <= 337) {
+                    setMagCornerStr(QString::number(mag_corner) + "\xc2\xb0 \xe8\xa5\xbf\xe5\x8c\x97");
+                }
+
+
+            }
+
+//            std::cout<<" receivedata" + receivedata.toStdString()<<std::endl;
+        }
+
 //        std::cout<<" receivedata" + receivedata.toStdString()<<std::endl;
         m_receivedata= receivedata;//将某次收到的数据进行累加，因为如果不累加的话每次有readyread就会触发此函数，会重置m_receivedata，覆盖之前收到的数据
 //        if(receivedata.length() > 36){

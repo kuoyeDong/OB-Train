@@ -86,6 +86,7 @@ Page {
             }
 
             onClicked: {
+                myclassExposeByRegType.setCurrentPage(15);//打开演示页面
                 page3.visible = true;
                 page3.stack = stack;
                 stack.push(page3)

@@ -29,5 +29,7 @@
         <file>Drone/DronePage/DRONEHEADING.qml</file>
         <file>Drone/ESCmotor/ESCInfoPage.qml</file>
         <file>Drone/ESCmotor/ESCProjectDevelopPage.qml</file>
+        <file>Drone/Doubler/IMU2D.qml</file>
+        <file>Drone/Doubler/CompassUiBig.qml</file>
     </qresource>
 </RCC>
